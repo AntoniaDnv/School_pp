@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "Arrays\Arrays.csproj", "{74E27565-B10F-4EAB-B5AC-72DCD128962F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "daysOfWeek", "Arrays\daysOfWeek.csproj", "{74E27565-B10F-4EAB-B5AC-72DCD128962F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumInRevursOrder", "NumInRevursOrder\NumInRevursOrder.csproj", "{BD4F107F-3F07-4642-8B67-A7F852D7D8EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{74E27565-B10F-4EAB-B5AC-72DCD128962F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74E27565-B10F-4EAB-B5AC-72DCD128962F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74E27565-B10F-4EAB-B5AC-72DCD128962F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD4F107F-3F07-4642-8B67-A7F852D7D8EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD4F107F-3F07-4642-8B67-A7F852D7D8EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD4F107F-3F07-4642-8B67-A7F852D7D8EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD4F107F-3F07-4642-8B67-A7F852D7D8EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
