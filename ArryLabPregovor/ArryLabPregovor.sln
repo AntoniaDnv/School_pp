@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Train", "ArryLabPregovor\Tr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zig-zag", "zig-zag\zig-zag.csproj", "{D34000AF-C0BD-4804-9A11-00201993619D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArryRotation", "ArryRotation\ArryRotation.csproj", "{79ABBDB2-5DA8-43BC-84A8-96B948991957}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopIntigers", "TopIntigers\TopIntigers.csproj", "{8F33D8DA-883E-49B5-BFD3-C97A08F7B70F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{D34000AF-C0BD-4804-9A11-00201993619D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D34000AF-C0BD-4804-9A11-00201993619D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D34000AF-C0BD-4804-9A11-00201993619D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79ABBDB2-5DA8-43BC-84A8-96B948991957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79ABBDB2-5DA8-43BC-84A8-96B948991957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79ABBDB2-5DA8-43BC-84A8-96B948991957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79ABBDB2-5DA8-43BC-84A8-96B948991957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F33D8DA-883E-49B5-BFD3-C97A08F7B70F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F33D8DA-883E-49B5-BFD3-C97A08F7B70F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F33D8DA-883E-49B5-BFD3-C97A08F7B70F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F33D8DA-883E-49B5-BFD3-C97A08F7B70F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
