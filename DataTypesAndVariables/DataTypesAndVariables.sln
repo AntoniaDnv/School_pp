@@ -9,13 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumDig", "SumDig\SumDig.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elevator", "Elevator\Elevator.csproj", "{F9EC489A-35DC-49FB-9D6B-9336ECAF468C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumChar", "SumChar\SumChar.csproj", "{59737CB0-551A-43DF-9742-AE52A3C3528B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumChar", "SumChar\SumChar.csproj", "{59737CB0-551A-43DF-9742-AE52A3C3528B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "test", "test\test.csproj", "{EAF878A0-4963-47F9-8428-64600B62E0CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "test", "test\test.csproj", "{EAF878A0-4963-47F9-8428-64600B62E0CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintPart", "PrintPart\PrintPart.csproj", "{9F3203D4-F36D-4DF3-BFA4-A39ACE730B8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrintPart", "PrintPart\PrintPart.csproj", "{9F3203D4-F36D-4DF3-BFA4-A39ACE730B8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "waterOverflow", "waterOverflow\waterOverflow.csproj", "{640D35FC-A22C-4BF8-AD39-F11B4675545D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "waterOverflow", "waterOverflow\waterOverflow.csproj", "{640D35FC-A22C-4BF8-AD39-F11B4675545D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIXzad", "SIXzad\SIXzad.csproj", "{3B77EEB3-4EC9-4D5E-BBE9-5A04980E4944}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{640D35FC-A22C-4BF8-AD39-F11B4675545D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{640D35FC-A22C-4BF8-AD39-F11B4675545D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{640D35FC-A22C-4BF8-AD39-F11B4675545D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B77EEB3-4EC9-4D5E-BBE9-5A04980E4944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B77EEB3-4EC9-4D5E-BBE9-5A04980E4944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B77EEB3-4EC9-4D5E-BBE9-5A04980E4944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B77EEB3-4EC9-4D5E-BBE9-5A04980E4944}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

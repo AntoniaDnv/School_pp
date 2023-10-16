@@ -8,20 +8,28 @@
                    .Split(" ", StringSplitOptions.RemoveEmptyEntries)
                    .Select(int.Parse)
                    .ToArray();
-            int max = int.MinValue;
+          
 
             for (int i = 0; i < arry.Length; i++)
             {
-                
-                if (arry[i] > max)
+                bool f = true;
+                for (int j = i+1; j<arry.Length; j++)
                 {
-                    max = arry[i];
+                    if (arry[j] >= arry[i])
+                    {
+                        f = false;
+                        break;
+                     
+
+                    }
+                  
+                }
+                if (f == true)
+                {
+                    Console.Write($"{arry[i]} "); 
                 }
             }
-            for(int i = 0;i < max.Length;i++)
-            {
-
-            }
+            
 
         }
     }

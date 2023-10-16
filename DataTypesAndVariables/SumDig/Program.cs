@@ -4,24 +4,16 @@
     {
         static void Main(string[] args)
         {
-
-            int[] numbers = Console.ReadLine()
-                .Split(" ", StringSplitOptions.RemoveEmptyEntries)
-                .Select(int.Parse)
-                .ToArray();
-           
-          
+            int num = int.Parse(Console.ReadLine());
             int sum = 0;
-            foreach (int number in numbers)
+
+            while (num != 0)
             {
-                for(int i = 0; i < numbers.Length; i++)
-                {
-                    sum += numbers[i];
-                }
-              
+                int digit = num - num / 10 * 10;
+                sum += digit;
+                num = num / 10;
             }
 
-         
             Console.WriteLine(sum);
 
         }
