@@ -4,6 +4,8 @@
     {
         static void Main(string[] args)
         {
+
+          
             string win = 
 @"┌───────────────────────────┐
 │ │
@@ -338,23 +340,34 @@
 @" __/══════╩═══"
 
             };
-               
+            static string[] RandomWords()
+
+            {
+                string currentDirectory = Directory.GetCurrentDirectory();
+                string projectDirectory = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
+
+                const string WordsFileName = "words.txt";
+
+                string path = $@"{projectDirectory}/{WordsFileName}";
+
+                string[] words = File.ReadAllLines(path);
+
+                return words;
 
 
 
+            }
+
+            string[] words = RandomWords();
+            Console.CursorVisible = false ;
+            while(true)
+            {
+              //  string word = GetRandomWords(words);
+
+                string wordToGuess = new(Underscore, word.Length);
+            }
         }
-        static void RandomWords(string[] args)
-        {
-            string currentDirectory = Directory.GetCurrentDirectory();
-            string projectDirectory = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
-
-            const string WordsFileName = "words.txt";
-
-            string path = $@"{projectDirectory}/{WordsFileName}";
-
-            string[] words = File.ReadAllLines(path);
-          
-            return words;
-        }
+        
+      
     }
 }
