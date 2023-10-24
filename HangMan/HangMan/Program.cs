@@ -449,7 +449,7 @@ namespace HangMan
                  if (continuo == "quit")
                    {
                       Console.Clear();
-                      Console.WriteLine("Thamk you for playing! Hangman was closed.");
+                      Console.WriteLine("Thank you for playing! Hangman was closed.");
                        break;
                    }
                 Console.Clear();
