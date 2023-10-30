@@ -11,7 +11,7 @@
 
         static void GetGrade(double grade)
         {
-            if(grade <= 2.99)
+            if(grade <= 2.99 && grade>=2)
             {
                 Console.WriteLine("Fail");
             }

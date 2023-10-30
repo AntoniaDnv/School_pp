@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LargerNum", "MethodsLab\LargerNum.csproj", "{3BB53092-5E45-45E7-9155-2159A41EB77A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LargerNum", "MethodsLab\LargerNum.csproj", "{3BB53092-5E45-45E7-9155-2159A41EB77A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grades", "Grades\Grades.csproj", "{7203C6FB-3889-496C-B79F-2C57E1EEF859}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grades", "Grades\Grades.csproj", "{7203C6FB-3889-496C-B79F-2C57E1EEF859}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "signOfIntigerNums", "signOfIntigerNums\signOfIntigerNums.csproj", "{ACFC1653-89B1-4DA7-A474-2460563B6502}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caclculations", "Caclculations\Caclculations.csproj", "{E5A3E13A-E713-4AB9-B974-6DA7119E92EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "triangles", "triangles\triangles.csproj", "{53360F48-60F5-4205-B372-5B4E64A913EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{7203C6FB-3889-496C-B79F-2C57E1EEF859}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7203C6FB-3889-496C-B79F-2C57E1EEF859}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7203C6FB-3889-496C-B79F-2C57E1EEF859}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACFC1653-89B1-4DA7-A474-2460563B6502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACFC1653-89B1-4DA7-A474-2460563B6502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACFC1653-89B1-4DA7-A474-2460563B6502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACFC1653-89B1-4DA7-A474-2460563B6502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5A3E13A-E713-4AB9-B974-6DA7119E92EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5A3E13A-E713-4AB9-B974-6DA7119E92EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5A3E13A-E713-4AB9-B974-6DA7119E92EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5A3E13A-E713-4AB9-B974-6DA7119E92EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53360F48-60F5-4205-B372-5B4E64A913EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53360F48-60F5-4205-B372-5B4E64A913EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53360F48-60F5-4205-B372-5B4E64A913EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53360F48-60F5-4205-B372-5B4E64A913EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
