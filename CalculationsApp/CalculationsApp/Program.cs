@@ -2,9 +2,12 @@ namespace CalculationsApp
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
+       private void buttonCalculate_Click(object sender, EventArgs e)
+        {
+            int num1 = int.Parse(Console.ReadLine());
+            int num2 = int.Parse(Console.ReadLine());
+            string operations
+        }
         [STAThread]
         static void Main()
         {
