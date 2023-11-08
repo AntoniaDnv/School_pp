@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CharactersInRange", "Charac
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassValidation", "PassValidation\PassValidation.csproj", "{FDFFBA5D-72C8-4F69-880D-E61DCE3C687E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiddleCharacter", "MiddleCharacter\MiddleCharacter.csproj", "{6C9D8738-6C16-4EFD-AF29-4BA4B53EE069}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiddleCharacter", "MiddleCharacter\MiddleCharacter.csproj", "{6C9D8738-6C16-4EFD-AF29-4BA4B53EE069}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactorialDivision", "FactorialDivision\FactorialDivision.csproj", "{20FDC51E-D7D2-47FF-B458-E68F54CFFD95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{6C9D8738-6C16-4EFD-AF29-4BA4B53EE069}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C9D8738-6C16-4EFD-AF29-4BA4B53EE069}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C9D8738-6C16-4EFD-AF29-4BA4B53EE069}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20FDC51E-D7D2-47FF-B458-E68F54CFFD95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20FDC51E-D7D2-47FF-B458-E68F54CFFD95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20FDC51E-D7D2-47FF-B458-E68F54CFFD95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20FDC51E-D7D2-47FF-B458-E68F54CFFD95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
