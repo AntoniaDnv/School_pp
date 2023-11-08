@@ -10,25 +10,24 @@ namespace PassValidation
             string pass = Console.ReadLine();
             int counter = 0;
             int digitCounter = 0;
-            int mistake = 0;
+           
+            bool done = false;
 
-          
-
-            PassCharNum( counter, mistake);
-            PassConsistency(pass,mistake);
+           done= PassCharNum( pass,counter, done);
+            done = PassConsistency(pass,done);
 
            
 
-            DigitChecker( pass, digitCounter, mistake);
+            done = DigitChecker(pass, digitCounter, done);
 
-            IsPassValid( mistake);
+            IsPassValid( done);
 
           
         }
 
       
 
-        static void PassCharNum(string pass, int counter, int mistake)
+    static bool PassCharNum(string pass, int counter, bool done)
         {
             foreach (char item in pass)
             {
@@ -39,11 +38,13 @@ namespace PassValidation
               
 
                 Console.WriteLine("Password must be between 6 and 10 characters");
-                mistake++;
+                return true;
+                
             }
+            return false;
 
         }
-        static void PassConsistency(string pass, int mistake)
+        static bool PassConsistency(string pass, bool done)
         {
 
             foreach (char c in pass)
@@ -51,14 +52,17 @@ namespace PassValidation
                 if (!(Char.IsLetter(c) || Char.IsDigit(c)))
                 {
                     Console.WriteLine($"Password must consist only of letters and digits");
-                    mistake++;
-                    break;
+                   return true;
+             
                 }
+              
 
             }
+            return false;
+
 
         }
-        static void DigitChecker(string pass, int digitCounter, int mistake )
+        static bool DigitChecker(string pass, int digitCounter, bool done )
         {
             foreach (char c in pass)
             {
@@ -73,14 +77,20 @@ namespace PassValidation
             if (digitCounter <= 1)
             {
                 Console.WriteLine("Password must have at least 2 digits");
-                mistake++;
                
+
+                return true;
             }
+            else
+            {
+                return false;
+            }
+         
         }
 
-        static void IsPassValid( int mistake)
+        static void IsPassValid( bool done)
         {
-           if(mistake == 0)
+           if(done == false)
             {
                 Console.WriteLine("Password is valid");
             }
