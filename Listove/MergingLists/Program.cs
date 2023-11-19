@@ -18,12 +18,14 @@
             {
                 if (listOne.Count > listTwo.Count)
                 {
-                    while(listTwo.Count > 0)
+                    while (listTwo.Count > 0)
                     {
                         Console.Write(listOne[i]);
                         Console.Write(listTwo[i]);
+                        listTwo.RemoveAt(i);
+                        i++;
                     }
-                    Console.Write(listOne[i]);
+
 
                 }
                 else
@@ -32,11 +34,14 @@
                     {
                         Console.Write(listOne[i]);
                         Console.Write(listTwo[i]);
+                        listOne.RemoveAt(i);
+                        i++;
                     }
-                    Console.Write(listTwo[i]);
+
                 }
-               
+
             }
+           
         }
     }
 }
