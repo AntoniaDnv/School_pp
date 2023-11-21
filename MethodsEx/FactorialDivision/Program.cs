@@ -22,7 +22,7 @@
             {
                 resultForM *= i;
             }
-
+           
             Console.Write($"{(result/resultForM):f2}");
 
         }

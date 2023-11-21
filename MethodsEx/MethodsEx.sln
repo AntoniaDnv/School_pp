@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiddleCharacter", "MiddleCh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactorialDivision", "FactorialDivision\FactorialDivision.csproj", "{20FDC51E-D7D2-47FF-B458-E68F54CFFD95}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PalindromeIntigers", "PalindromeIntigers\PalindromeIntigers.csproj", "{398E0AF7-B59C-4D99-B877-FA65122F7EDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{20FDC51E-D7D2-47FF-B458-E68F54CFFD95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20FDC51E-D7D2-47FF-B458-E68F54CFFD95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20FDC51E-D7D2-47FF-B458-E68F54CFFD95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{398E0AF7-B59C-4D99-B877-FA65122F7EDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{398E0AF7-B59C-4D99-B877-FA65122F7EDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{398E0AF7-B59C-4D99-B877-FA65122F7EDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{398E0AF7-B59C-4D99-B877-FA65122F7EDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

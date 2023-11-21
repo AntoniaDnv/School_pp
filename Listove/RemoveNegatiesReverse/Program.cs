@@ -17,15 +17,9 @@
             }
             else
             {
-                for (int i = 0; i < nums.Count; i++)
-                {
-                    int temp = nums[0];
-                    nums.RemoveAt(0);
-                    nums.Add(temp);
-                }
-
-            }
+                nums.Reverse();
                 Console.WriteLine(string.Join(" ", nums));
-           }
+            }
+        }
         }
     }
