@@ -8,14 +8,14 @@ namespace GameOfWar
 {
     public class Cards
     {
-        public Faces Face { get; set; }
-        public Suits Suits { get; set; }
+        public CardFace Face { get; set; }
+        public CardSuit Suits { get; set; }
 
         public override string ToString()
         {
            
 
-            int face = (int)Enum.Parse(typeof(Faces), this.Face.ToString());
+            int face = (int)Enum.Parse(typeof(CardFace), this.Face.ToString());
 
             char suite = (char)this.Suits;
           

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameOfWar
 {
-    public enum Faces
+    public enum CardFace
     {
             Two =2,
             Three =3,

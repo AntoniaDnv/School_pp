@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameOfWar
 {
-    public enum Suits
+    public enum CardSuit
     {
        
             Spade = '♠',
