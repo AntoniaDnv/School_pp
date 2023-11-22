@@ -61,7 +61,8 @@ namespace GameOfWar
 
                 pool.Enqueue(firstPlayerCards);
                 pool.Enqueue(secondPlayerCards);
-              ProcessWar(pool);
+           
+                        ProcessWar(pool);
 
                 DetermineRoundWinner(pool);
 
@@ -136,7 +137,8 @@ namespace GameOfWar
                     return true;
                 }
 
-                if(!secondPlayerDeck.Any())
+                if(!secondPlayerDeck.Any
+                    ())
                 {
                     Console.WriteLine($"After a total of {totalMoves} moves, the second player has won!");
                     return true;
