@@ -15,13 +15,13 @@ namespace SkipRope
         static void decifering(string word)
         {
             List<int> nums = new List<int>();
-          
+
             List<int> takeList = new List<int>();
-            
+
             List<int> skipList = new List<int>();
-            
+
             StringBuilder res = new StringBuilder();
-            
+
             List<string> notNums = new List<string>();
 
             for (int i = 0; i < word.Length; i++)

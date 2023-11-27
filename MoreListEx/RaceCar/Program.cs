@@ -24,7 +24,7 @@
                     leftTime = leftTime * 0.8;
                 }
             }
-            for (int i = time.Count; i >= (time.Count / 2)-1; i--)
+            for (int i = time.Count; i > (time.Count / 2)+1; i--)
             {
                 rightTime = rightTime + time[i-1];
                 if (time[i-1] == 0)
