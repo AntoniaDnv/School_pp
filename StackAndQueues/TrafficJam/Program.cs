@@ -16,9 +16,9 @@
 
             {
                
-                if (command == "green")
+                if (command == "green" )
                 {
-                   for(int i = 0; i <= n; i++)
+                   for(int i = 0; i < n; i++)
                    {
                         if (queue.Count > 0)
                         {
