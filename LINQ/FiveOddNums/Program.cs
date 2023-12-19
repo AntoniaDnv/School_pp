@@ -4,22 +4,30 @@
     {
         static void Main(string[] args)
         {
-            int[] nums = Console.ReadLine()
-                .Split(", ")
-                .Select(int.Parse)
-                .Where(n => n % 2 != 0)
-                .ToArray();
-          List<int> list = new List<int>(nums);
-            List <int>values = new List<int>(nums);
-            for(int i  = 0; i < 5; i++)
+            var children = Console.ReadLine().Split(' ');
+
+            var number = int.Parse(Console.ReadLine());
+
+            Queue<string> queue = new Queue<string>(children);
+
+            while (queue.Count != 1)
+
             {
-                int g = list.Max();
 
-               Console.Write($"{g} ");
+                for (int i = 1; i < number; i++)
 
-                list.Remove(g);
+                {
+
+                    queue.Enqueue(queue.Dequeue());
+
+                }
+
+                Console.WriteLine($"Removed {queue.Dequeue()}");
+
             }
-            
+
+            Console.WriteLine($"Last in {queue.Dequeue()}");
+
         }
     }
 }
