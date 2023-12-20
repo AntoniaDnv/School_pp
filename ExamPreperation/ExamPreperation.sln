@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BonusSroringSystem", "ExamPreperation\BonusSroringSystem.csproj", "{B754145F-BA46-4CBD-9161-AAD14A4FDD55}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackFlag", "BlackFlag\BlackFlag.csproj", "{9B6DF18F-612E-4282-B264-AACF176BC027}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "monsterExterminator", "monsterExterminator\monsterExterminator.csproj", "{EABF6576-2F6B-40D2-9927-718456D9945C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{B754145F-BA46-4CBD-9161-AAD14A4FDD55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B754145F-BA46-4CBD-9161-AAD14A4FDD55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B754145F-BA46-4CBD-9161-AAD14A4FDD55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B6DF18F-612E-4282-B264-AACF176BC027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B6DF18F-612E-4282-B264-AACF176BC027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B6DF18F-612E-4282-B264-AACF176BC027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B6DF18F-612E-4282-B264-AACF176BC027}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EABF6576-2F6B-40D2-9927-718456D9945C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EABF6576-2F6B-40D2-9927-718456D9945C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EABF6576-2F6B-40D2-9927-718456D9945C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EABF6576-2F6B-40D2-9927-718456D9945C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
