@@ -34,15 +34,15 @@ namespace monsterExterminator
             int checker = monster[monster.Length - 1];
             if (checker == 0)
             {
-                Console.WriteLine("All Monsters have been beaten!");
+                Console.WriteLine("All monsters have been killed!");
                
             }
             else
             {
                 Console.WriteLine("The solder has been defeated.");
             }
-
-            Console.WriteLine(counter);
+            Console.WriteLine($"Total monsters killed:{counter}");
+         
 
         }
     }
