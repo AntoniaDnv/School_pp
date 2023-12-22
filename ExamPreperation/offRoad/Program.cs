@@ -34,7 +34,7 @@
                     {
                         Console.WriteLine($"John did not reach: Altitude {i + 1}");
                         Console.WriteLine($"John failed to reach the top.");
-                        Console.WriteLine($"Reached altitudes: {string.Join(" ","Altitude", reachedAltitudes)}");
+                        Console.WriteLine($"Reached altitudes: {string.Join(" ", reachedAltitudes)}");
                         return;
                     }
                 }
