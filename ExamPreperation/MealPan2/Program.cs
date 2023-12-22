@@ -12,7 +12,7 @@
                 .Select(int.Parse)
                 .ToArray();
             int mealCalorie = 0;
-
+            Stack<string> stack = new Stack<string>(food);
             int a = 0;
 
             for (int i = 0; i < calories.Length; i++)
@@ -43,14 +43,17 @@
                 if (test < 0)
                 {
                   int  mealleft = mealCalorie + calories[calories.Length - i - 1];
+                   
+                    stack.Pop();
                     if (calories[0] < 0)
                     {
                         Console.WriteLine($"John ate enough, he had {a + 1} meals.");
+                        Console.WriteLine($"Meals left: {stack.Pop()}.");
                         return;
                     }
                     int test2 = calories[calories.Length - i - 2];
                     calories[calories.Length - i - 2] = calories[calories.Length - i - 2] - ( mealCalorie - mealleft);
-                    Console.WriteLine(calories[calories.Length - i - 2]);
+                   
 
                     i++;
                 }
