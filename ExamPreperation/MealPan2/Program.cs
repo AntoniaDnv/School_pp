@@ -12,15 +12,12 @@
                 .Select(int.Parse)
                 .ToArray();
             int mealCalorie = 0;
+
             int a = 0;
 
             for (int i = 0; i < calories.Length; i++)
             {
-                int test = calories[calories.Length - i - 1];
-                if (test < 0)
-                {
-                    mealCalorie = mealCalorie + calories[calories.Length - i - 1];
-                }
+                
                 switch (food[a])
                 {
                     case "salad":
@@ -38,12 +35,38 @@
                 }
 
                 calories[calories.Length - i - 1] = calories[calories.Length - i - 1] - mealCalorie;
-                Console.WriteLine(calories[calories.Length - i - 1]);
+                
+              
+                
+                int test = calories[calories.Length - i - 1];
+                
+                if (test < 0)
+                {
+                  int  mealleft = mealCalorie + calories[calories.Length - i - 1];
+                    if (calories[0] < 0)
+                    {
+                        Console.WriteLine($"John ate enough, he had {a + 1} meals.");
+                        return;
+                    }
+                    int test2 = calories[calories.Length - i - 2];
+                    calories[calories.Length - i - 2] = calories[calories.Length - i - 2] - ( mealCalorie - mealleft);
+                    Console.WriteLine(calories[calories.Length - i - 2]);
+
+                    i++;
+                }
+
+                if( a >= food.Length- 1)
+                {
+                    Console.WriteLine($"John had {a + 1} meals.");
+                    Console.WriteLine($"For the next few days, he can eat { string.Join(", ", calories)} calories.");
+                    return;
+                }
+                a++;
                 if (calories[calories.Length - i - 1] > 0)
                 {
                     i--;
                 }
-                a++;
+                
                 
                 
             }
