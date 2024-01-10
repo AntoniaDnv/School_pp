@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiDimentionalArry", "MultiDimentionalArry\MultiDimentionalArry.csproj", "{2F3F6711-DE3B-4A7B-B265-799B90FF20A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zad2", "Zad2\Zad2.csproj", "{C4B95614-020C-416C-92FE-6A957F58D565}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zad3", "zad3\zad3.csproj", "{BB779B2B-B710-4E66-8A47-607A423EBCAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F3F6711-DE3B-4A7B-B265-799B90FF20A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F3F6711-DE3B-4A7B-B265-799B90FF20A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F3F6711-DE3B-4A7B-B265-799B90FF20A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F3F6711-DE3B-4A7B-B265-799B90FF20A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4B95614-020C-416C-92FE-6A957F58D565}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4B95614-020C-416C-92FE-6A957F58D565}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4B95614-020C-416C-92FE-6A957F58D565}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4B95614-020C-416C-92FE-6A957F58D565}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB779B2B-B710-4E66-8A47-607A423EBCAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB779B2B-B710-4E66-8A47-607A423EBCAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB779B2B-B710-4E66-8A47-607A423EBCAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB779B2B-B710-4E66-8A47-607A423EBCAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4CA7A61E-E18B-4F55-AFB0-901B65826452}
+	EndGlobalSection
+EndGlobal
