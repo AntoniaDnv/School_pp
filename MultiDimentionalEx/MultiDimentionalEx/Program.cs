@@ -11,35 +11,46 @@ namespace MultiDimentionalEx
                 .Select(int.Parse)
                 .ToArray();
             int[,] matrix = new int[size[0], size[1]];
-
-            int count = 0;
+            int[,] maxMatrix = new int[3, 3];
+           
+            int sum = 0;
+            int max = int.MinValue;
+      
+            int m = 0;
+            int d = 0;
 
             for (int row = 0; row < matrix.GetLength(0); row++)
             {
-                char[] elements = Console.ReadLine()
+                int[] elements = Console.ReadLine()
                     .Split(" ", StringSplitOptions.RemoveEmptyEntries)
-                    .Select(char.Parse)
+                    .Select(int.Parse)
                     .ToArray();
                 for (int col = 0; col < matrix.GetLength(1); col++)
                 {
                     matrix[row, col] = elements[col];
                 }
             }
-            for (int row = 0; row < matrix.GetLength(0) -1; row++) 
+            for (int row = 0; row < matrix.GetLength(0) -2; row++) 
             {
-                for (int col = 0; col < matrix.GetLength(1) -1; col++)
+                for (int col = 0; col < matrix.GetLength(1) -2; col++)
                 {
-                    if(matrix[row, col] == matrix[row + 1, col] && matrix[row, col + 1] == matrix[row + 1, col + 1])
-                    {
-                        if (matrix[row, col] == matrix[row, col + 1])
-                        {
-                            count++;
-                        }
-                    }
-                   
+
+                  sum = matrix[row, col] + matrix[row, col+1] + matrix[row, col+2] +
+                        matrix[row + 1, col] + matrix[row+1,  col+1] + matrix[row+1, col + 2]+
+                        matrix[row + 2, col] + matrix[row + 2, col + 1] + matrix[row+2, col + 2];
+                   if(sum > max)
+                   {
+                        max = sum;
+                        m = col;
+                        d = row;
+                   }
                 }
             }
-            Console.WriteLine(count);
+            Console.WriteLine($"Sum = {sum}");
+            Console.WriteLine($"{matrix[d, m]} {matrix[d, m+1]} {matrix[d, m+2]}" +
+                $"\n{matrix[d + 1, m]} {matrix[d+1,  m+1]} {matrix[d+2, m + 2]}" +
+                $"\n{matrix[d + 2, m] } {matrix[d + 2, m + 1]} {matrix[d+2, m + 2]}");
+           
             
         }
       
