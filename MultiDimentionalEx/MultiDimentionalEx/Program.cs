@@ -48,7 +48,7 @@ namespace MultiDimentionalEx
             }
             Console.WriteLine($"Sum = {sum}");
             Console.WriteLine($"{matrix[d, m]} {matrix[d, m+1]} {matrix[d, m+2]}" +
-                $"\n{matrix[d + 1, m]} {matrix[d+1,  m+1]} {matrix[d+2, m + 2]}" +
+                $"\n{matrix[d + 1, m]} {matrix[d+1,  m+1]} {matrix[d+1, m + 2]}" +
                 $"\n{matrix[d + 2, m] } {matrix[d + 2, m + 1]} {matrix[d+2, m + 2]}");
            
             
