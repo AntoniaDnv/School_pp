@@ -30,10 +30,21 @@ namespace legendaryFarming
                     {
                         materials[material] += quantity;
 
-                        if (materials[material] >= 250)
+                        if (materials["shards"] >= 250)
                         {
-                            obtainedItem = material;
-                            materials[material] -= 250;
+                            obtainedItem = "shards";
+                        }
+                        else if (materials["fragments"] >= 250)
+                        {
+                            obtainedItem = "fragments";
+                        }
+                        else if (materials["motes"] >= 250)
+                        {
+                            obtainedItem = "motes";
+                        }
+
+                        if (!string.IsNullOrEmpty(obtainedItem))
+                        {
                             break;
                         }
                     }

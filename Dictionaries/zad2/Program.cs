@@ -15,10 +15,12 @@
                     students.Add(grade[0], new List<double>());
                     students[grade[0]].Add(int.Parse(grade[1]));
                 }
-               else {
+               else 
+               {
                     students[grade[0]].Add(int.Parse(grade[1]));
-                }
+               }
             }
+           
             foreach(var student in students)
             {
 

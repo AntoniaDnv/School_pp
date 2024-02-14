@@ -7,9 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dictionaries-exercise", "Di
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "selectedELEMENTS", "selectedELEMENTS\selectedELEMENTS.csproj", "{EE35A19D-483F-4635-9056-C391893F887D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "periodicTable", "periodicTable\periodicTable.csproj", "{F8AA9D6F-74F8-452B-9D45-FE3A5CDAC3E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "periodicTable", "periodicTable\periodicTable.csproj", "{F8AA9D6F-74F8-452B-9D45-FE3A5CDAC3E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "evenTimes", "evenTimes\evenTimes.csproj", "{88904A0A-D6C6-4B8B-9FFC-10DD1885EBC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "evenTimes", "evenTimes\evenTimes.csproj", "{88904A0A-D6C6-4B8B-9FFC-10DD1885EBC7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "legendaryFarming", "legendaryFarming\legendaryFarming.csproj", "{A6C0F18C-9C2B-4F6B-B68A-4637648903B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "softUniParking", "softUniParking\softUniParking.csproj", "{9D3F531B-11B4-417F-94F4-7540F70C2600}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{88904A0A-D6C6-4B8B-9FFC-10DD1885EBC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88904A0A-D6C6-4B8B-9FFC-10DD1885EBC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88904A0A-D6C6-4B8B-9FFC-10DD1885EBC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6C0F18C-9C2B-4F6B-B68A-4637648903B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6C0F18C-9C2B-4F6B-B68A-4637648903B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6C0F18C-9C2B-4F6B-B68A-4637648903B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6C0F18C-9C2B-4F6B-B68A-4637648903B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D3F531B-11B4-417F-94F4-7540F70C2600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D3F531B-11B4-417F-94F4-7540F70C2600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D3F531B-11B4-417F-94F4-7540F70C2600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D3F531B-11B4-417F-94F4-7540F70C2600}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
