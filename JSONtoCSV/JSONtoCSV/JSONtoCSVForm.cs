@@ -1,10 +1,15 @@
 namespace JSONtoCSV
 {
-    public partial class JSONtoCSVForm : Form
+    public partial class JsonToCsvForm : Form
     {
-        public JSONtoCSVForm()
+        public JsonToCsvForm()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
