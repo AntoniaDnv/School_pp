@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace JSONtoCSV
 {
-    enum ApiPath
+    internal class CountryName
     {
-        Name,
-        Region,
-        Subregion,
-        Capital 
     }
 }

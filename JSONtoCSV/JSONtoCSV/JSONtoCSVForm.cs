@@ -1,3 +1,5 @@
+using System.Security.Cryptography.X509Certificates;
+
 namespace JSONtoCSV
 {
     public partial class JsonToCsvForm : Form
@@ -18,11 +20,11 @@ namespace JSONtoCSV
 
             try
             {
-               // JsonToCsv.CheckUserInput(userInput);
+               JsonToCsv.CheckUserInput(userInput);
             }
             catch (Exception ex)
             {
-               //DisplayInvalidInputMessage(ex.Message, "Error");
+               DisplayInvalidInputMessage(ex.Message, "Error");
                 return;
             }
 
@@ -33,8 +35,13 @@ namespace JSONtoCSV
             }
             catch (Exception ex) 
             {
-               // DisplayInvalidInputMessage(ex.Message, "Error");
+                DisplayInvalidInputMessage(ex.Message, "Error");
             }
+
+        }
+        public void DisplayInvalidInputMessage(string message, string title)
+        {
+            MessageBox.Show(message, title);
         }
     }
 }
