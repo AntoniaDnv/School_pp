@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace JSONtoCSV
 {
-    internal class CountryName
+    public class CountryName
     {
+       public string Commmon { get; set; }
+        public string Official { get; set; }
     }
 }

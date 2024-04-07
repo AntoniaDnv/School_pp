@@ -86,11 +86,11 @@
             labelEndPoints.BorderStyle = BorderStyle.FixedSingle;
             labelEndPoints.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             labelEndPoints.ForeColor = SystemColors.Window;
-            labelEndPoints.Location = new Point(505, 317);
+            labelEndPoints.Location = new Point(473, 295);
             labelEndPoints.Name = "labelEndPoints";
-            labelEndPoints.Size = new Size(85, 22);
+            labelEndPoints.Size = new Size(151, 202);
             labelEndPoints.TabIndex = 6;
-            labelEndPoints.Text = "Endpoints:";
+            labelEndPoints.Text = "Endpoints:\r\n-name/{name}\r\n(name/peru)\r\n-region/{region}\r\n(region/europe)\r\n-subregion/{region}\r\n(subregion/europe)\r\n- capital/{capital}\r\n   (capital/lima)\r\n\r\n";
             // 
             // labelJson
             // 

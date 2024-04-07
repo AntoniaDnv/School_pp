@@ -20,20 +20,20 @@ namespace JSONtoCSV
 
             try
             {
-               JsonToCsv.CheckUserInput(userInput);
+                JsonToCsv.CheckUserInput(userInput);
             }
             catch (Exception ex)
             {
-               DisplayInvalidInputMessage(ex.Message, "Error");
+                DisplayInvalidInputMessage(ex.Message, "Error");
                 return;
             }
 
             try
             {
-                //textBoxJson.Text = JsonToCsv.GetJson(userInput);
+                textBoxJson.Text = JsonToCsv.GetJson(userInput);
 
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 DisplayInvalidInputMessage(ex.Message, "Error");
             }

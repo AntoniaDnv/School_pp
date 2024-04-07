@@ -8,9 +8,9 @@ namespace JSONtoCSV
 {
     enum ApiPath
     {
-        Name,
-        Region,
-        Subregion,
-        Capital 
+        name,
+        region,
+        subregion,
+        capital 
     }
 }
