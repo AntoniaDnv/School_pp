@@ -122,6 +122,7 @@
             btnRequest.TabIndex = 4;
             btnRequest.Text = "Request API";
             btnRequest.UseVisualStyleBackColor = true;
+            btnRequest.Click += RequestButtonClick;
             // 
             // btnConvert
             // 

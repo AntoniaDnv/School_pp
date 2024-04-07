@@ -11,5 +11,10 @@ namespace JSONtoCSV
         {
 
         }
+
+        private void RequestButtonClick(object sender, EventArgs e)
+        {
+            string userInput = $"{textBoxUserInput.Text}/";
+        }
     }
 }
