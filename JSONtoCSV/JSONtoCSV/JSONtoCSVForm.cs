@@ -15,6 +15,26 @@ namespace JSONtoCSV
         private void RequestButtonClick(object sender, EventArgs e)
         {
             string userInput = $"{textBoxUserInput.Text}/";
+
+            try
+            {
+               // JsonToCsv.CheckUserInput(userInput);
+            }
+            catch (Exception ex)
+            {
+               //DisplayInvalidInputMessage(ex.Message, "Error");
+                return;
+            }
+
+            try
+            {
+                //textBoxJson.Text = JsonToCsv.GetJson(userInput);
+
+            }
+            catch (Exception ex) 
+            {
+               // DisplayInvalidInputMessage(ex.Message, "Error");
+            }
         }
     }
 }
