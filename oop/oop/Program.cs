@@ -10,7 +10,7 @@
             string color = Console.ReadLine();
 
              Rectangle firstRect = new Rectangle(width, heigth, color);
-            Console.WriteLine($"Rect ({firstRect.Width}, {firstRect.Height}, {firstRect.Color}) has area {firstRect.CalcArea()}.");
+            Console.WriteLine($"Rect({firstRect.Width}, {firstRect.Height}, {firstRect.Color}) has area {firstRect.CalcArea()}.");
         }
     }
 }
