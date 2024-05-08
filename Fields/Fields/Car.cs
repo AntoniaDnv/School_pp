@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarManifacturer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,8 @@ namespace Fields
         private int year;
         private double fuelQuantity;
         private double fuelConsumption;
+        private Engine engine;
+        private Tire[] tires;
 
         public string? Make
         {
@@ -43,6 +46,17 @@ namespace Fields
             get { return fuelConsumption; }
             set { fuelConsumption = value; }
         }
+        public Engine Engine
+        {
+            get {return engine;}
+            set { engine = value; }
+        }
+        public Tire[] Tire
+        {
+            get { return tires; }
+            set {  tires = value; }
+        }
+
 
         public void Drive(double distance)
         {
@@ -63,5 +77,38 @@ namespace Fields
 
 
        }
+
+        public Car()
+        {
+            this.Make = "VM";
+            this.Model = "MK5";
+            this.Yea = 2025;
+            this.fuelQuantity = 200;
+            this.fuelConsumption = 200;
+    }
+        public Car(string make, string model, int year)
+            : this()
+        {
+            this.Make = make;
+            this.Model = model;
+            this.Yea = year;
+        }
+        public Car(string make, string model, int year, 
+            double fuelQuantity, double fuelConsumption)
+          : this(make, model, year)
+        {
+            this.FuelConsumption = fuelConsumption;
+            this.FuelQuantity = fuelQuantity;
+
+        }
+
+        public Car(string make, string model, int year, 
+            double fuelQuantity, double fuelConsumption, 
+           Engine engine, Tire[] tires)
+            : this(make, model, year, fuelQuantity, fuelConsumption)
+        {
+           this.Engine = engine;
+            this.Tire = tires;
+        }
     }
 }
