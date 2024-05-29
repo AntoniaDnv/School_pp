@@ -37,7 +37,7 @@ namespace tennisScor4eApp
                 string playerName = player.Key;
                 string playerPoints = player.Value.ToString();
 
-                L
+                
             }
         }
 

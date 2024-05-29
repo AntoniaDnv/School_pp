@@ -48,7 +48,7 @@ namespace JSONtoCSV
             Task<HttpResponseMessage> response = GetResponse(userInput);
             HttpStatusCode statusCode = response.Result.StatusCode;
 
-            if(statusCode == HttpStatusCode.OK)
+            if(statusCode == HttpStatusCode.NotFound)
             {
                 throw new Exception("No results found");
             }

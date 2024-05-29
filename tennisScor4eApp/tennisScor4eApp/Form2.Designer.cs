@@ -33,12 +33,12 @@
             lblVictories = new Label();
             lblDraws = new Label();
             lVVictories = new ListView();
-            lVLosses = new ListView();
-            LVDraws = new ListView();
             colVictoryCompetitor = new ColumnHeader();
             colVictoryScore = new ColumnHeader();
+            lVLosses = new ListView();
             colLosesPlayer = new ColumnHeader();
             colLosesScore = new ColumnHeader();
+            LVDraws = new ListView();
             colDrawPlayer = new ColumnHeader();
             colDrawScore = new ColumnHeader();
             SuspendLayout();
@@ -57,7 +57,7 @@
             // lblLosses
             // 
             lblLosses.AutoSize = true;
-            lblLosses.Location = new Point(380, 152);
+            lblLosses.Location = new Point(306, 157);
             lblLosses.Name = "lblLosses";
             lblLosses.Size = new Size(51, 20);
             lblLosses.TabIndex = 1;
@@ -66,7 +66,7 @@
             // lblVictories
             // 
             lblVictories.AutoSize = true;
-            lblVictories.Location = new Point(113, 152);
+            lblVictories.Location = new Point(36, 152);
             lblVictories.Name = "lblVictories";
             lblVictories.Size = new Size(66, 20);
             lblVictories.TabIndex = 2;
@@ -75,7 +75,7 @@
             // lblDraws
             // 
             lblDraws.AutoSize = true;
-            lblDraws.Location = new Point(617, 157);
+            lblDraws.Location = new Point(561, 157);
             lblDraws.Name = "lblDraws";
             lblDraws.Size = new Size(50, 20);
             lblDraws.TabIndex = 3;
@@ -86,58 +86,64 @@
             // 
             lVVictories.BackColor = Color.Coral;
             lVVictories.Columns.AddRange(new ColumnHeader[] { colVictoryCompetitor, colVictoryScore });
-            lVVictories.Location = new Point(113, 175);
+            lVVictories.Location = new Point(36, 180);
             lVVictories.Name = "lVVictories";
-            lVVictories.Size = new Size(151, 121);
+            lVVictories.Size = new Size(218, 121);
             lVVictories.TabIndex = 4;
             lVVictories.UseCompatibleStateImageBehavior = false;
             lVVictories.View = View.Details;
+            // 
+            // colVictoryCompetitor
+            // 
+            colVictoryCompetitor.Text = "Victory Competitor";
+            colVictoryCompetitor.Width = 150;
+            // 
+            // colVictoryScore
+            // 
+            colVictoryScore.Text = "Score";
+            colVictoryScore.Width = 80;
             // 
             // lVLosses
             // 
             lVLosses.BackColor = Color.Coral;
             lVLosses.Columns.AddRange(new ColumnHeader[] { colLosesPlayer, colLosesScore });
-            lVLosses.Location = new Point(380, 175);
+            lVLosses.Location = new Point(306, 180);
             lVLosses.Name = "lVLosses";
-            lVLosses.Size = new Size(151, 121);
+            lVLosses.Size = new Size(210, 121);
             lVLosses.TabIndex = 5;
             lVLosses.UseCompatibleStateImageBehavior = false;
             lVLosses.View = View.Details;
+            // 
+            // colLosesPlayer
+            // 
+            colLosesPlayer.Text = "Competitor";
+            colLosesPlayer.Width = 150;
+            // 
+            // colLosesScore
+            // 
+            colLosesScore.Text = "Score";
+            colLosesScore.Width = 80;
             // 
             // LVDraws
             // 
             LVDraws.BackColor = Color.Coral;
             LVDraws.Columns.AddRange(new ColumnHeader[] { colDrawPlayer, colDrawScore });
-            LVDraws.Location = new Point(617, 180);
+            LVDraws.Location = new Point(561, 180);
             LVDraws.Name = "LVDraws";
-            LVDraws.Size = new Size(151, 121);
+            LVDraws.Size = new Size(208, 121);
             LVDraws.TabIndex = 6;
             LVDraws.UseCompatibleStateImageBehavior = false;
             LVDraws.View = View.Details;
             // 
-            // colVictoryCompetitor
-            // 
-            colVictoryCompetitor.Text = "Victory Competitor";
-            // 
-            // colVictoryScore
-            // 
-            colVictoryScore.Text = "Score";
-            // 
-            // colLosesPlayer
-            // 
-            colLosesPlayer.Text = "Competitor";
-            // 
-            // colLosesScore
-            // 
-            colLosesScore.Text = "Score";
-            // 
             // colDrawPlayer
             // 
             colDrawPlayer.Text = "Competitor";
+            colDrawPlayer.Width = 150;
             // 
             // colDrawScore
             // 
             colDrawScore.Text = "Score";
+            colDrawScore.Width = 80;
             // 
             // PlayerNameForm
             // 
