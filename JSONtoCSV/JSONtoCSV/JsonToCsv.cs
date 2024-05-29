@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -13,7 +15,15 @@ namespace JSONtoCSV
     {
         private static IEnumerable<Country> countries = new List<Country>();
        
-       
+       public static string SerializeJson()
+        {
+            JsonSerializerSettings settings = new JsonSerializerSettings
+            {
+                ContractResolver = new CamelCasePropertyNamesContractResolver()  
+            };
+            string serializedJson = JsonConvert.SerializeObject(countries,Formatting.Indented, settings);
+            return serializedJson;
+        }
 
         public static void CheckUserInput(string userInput)
         {
@@ -56,22 +66,20 @@ namespace JSONtoCSV
               throw new Exception("An error apeared! Try again.");
 
             }
+            //page 47 - needs testing!!!!
              string responseAsString = ReadResponseAsStringAsync(response);
 
             try
             {
-               // countries = DeserializeJson(responseAsString);
+                countries = DeserializeJson(responseAsString);
             }
             catch (Exception )
             {
                 throw new Exception("Invalid JSON. Try another request.");
             }
 
-           // string countriesAsJson = SerializeJson();
-           // return countriesAsJson;
-            return String.Empty;
-
-
+            string countriesAsJson = SerializeJson();
+            return countriesAsJson;
 
         }
         public static Task<HttpResponseMessage> GetResponse(string userInput)
@@ -85,5 +93,9 @@ namespace JSONtoCSV
 
         public static string ReadResponseAsStringAsync(Task<HttpResponseMessage> response) 
             => response.Result.Content.ReadAsStringAsync().Result;
+
+        public static IEnumerable<Country> DeserializeJson(string responseAsString)
+            => JsonConvert.DeserializeObject<IEnumerable<Country>>(responseAsString)
+            .ToArray();
     }
 }

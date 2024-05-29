@@ -49,6 +49,7 @@
             textBoxJson.ScrollBars = ScrollBars.Vertical;
             textBoxJson.Size = new Size(400, 400);
             textBoxJson.TabIndex = 2;
+            textBoxJson.TextChanged += textBoxJson_TextChanged;
             // 
             // textBoxCsv
             // 
@@ -64,7 +65,7 @@
             // textBoxUserInput
             // 
             textBoxUserInput.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            textBoxUserInput.Location = new Point(596, 35);
+            textBoxUserInput.Location = new Point(616, 35);
             textBoxUserInput.Name = "textBoxUserInput";
             textBoxUserInput.Size = new Size(200, 39);
             textBoxUserInput.TabIndex = 1;
@@ -76,9 +77,10 @@
             labelUrl.ForeColor = SystemColors.Window;
             labelUrl.Location = new Point(307, 46);
             labelUrl.Name = "labelUrl";
-            labelUrl.Size = new Size(283, 28);
+            labelUrl.Size = new Size(303, 28);
             labelUrl.TabIndex = 9;
-            labelUrl.Text = "https://restcountries.com/v3.1/";
+            labelUrl.Text = "https://restcountries.com/v3.1/all";
+            labelUrl.Click += labelUrl_Click;
             // 
             // labelEndPoints
             // 

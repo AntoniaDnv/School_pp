@@ -43,5 +43,19 @@ namespace JSONtoCSV
         {
             MessageBox.Show(message, title);
         }
+
+        private void labelUrl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void JsonTextBoxTextChanged(object sender, EventArgs e)
+        {
+            if(textBoxJson.Text != string.Empty)
+            {
+                btnConvert.Visible = true;
+                btnConvert.Focus();
+            }
+        }
     }
 }
