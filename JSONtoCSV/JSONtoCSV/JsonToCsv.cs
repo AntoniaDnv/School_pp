@@ -21,16 +21,15 @@ namespace JSONtoCSV
 
             Match match = Regex.Match(userInput, userInputValidator);
 
-            if (!match.Success || !IsApiPathValid(match))
-            {
-                throw new Exception("Invalid input request");
-
-            }
+                if (!match.Success || !IsApiPathValid(match))
+                {
+                   throw new Exception("Invalid input request");
+                }
 
         }
         public static bool IsApiPathValid(Match match)
         {
-            string path = match.Groups["path"].Value.ToLower();
+            string path = match.Groups["path"].Value;
             string[] allApiPaths = Enum.GetNames(typeof(ApiPath));
 
             bool isPathValid = allApiPaths
