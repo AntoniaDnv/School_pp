@@ -4,24 +4,35 @@
     {
         static void Main(string[] args)
         {
-        
-            char[] validFacesLetters = {'J', 'Q', 'K', 'A', '2','3', '4','5','6','7','8','9' };
-            List<char> faces = new List<char>(validFacesLetters);
-            char[] validSuits = { 'S', 'H', 'D', 'C' };
-            List<char> suits = new List<char>(validSuits);
+
+            string[] validFacesLetters = { "J", "Q", "K", "A", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+            List<Card> cards = new List<Card>();
+            var validSuits = new Dictionary<string, string>()
+            {   {"S", "\u2660"},
+                { "H", "\u2665"},
+                { "D", "\u2666"},
+                { "C", "\u2663" } 
+            };
+          
             string[] deck = Console.ReadLine()
-                .Split(", ");
-            for(int i = 0; i < deck.Length; i++)
+                .Split(", ").ToArray();
+            foreach (string face in deck) 
             {
+                var cardElement = face.Split().ToArray();
+                var cardF = cardElement[0];
+                var cardS = cardElement[1];
                 try
                 {
-                    string[] card = deck[i].Split();
-                    if (!( faces.Contains(char.Parse(card[0])) && suits.Contains(char.Parse(card[1]))))
+                  
+                    if (!( validFacesLetters.Contains(cardF) || validSuits.ContainsKey(cardS)))
                     {
                         throw new Exception("$Invalid card!");
                     }
-                    Card cardDeck = new Card(char.Parse(card[0]), char.Parse(card[1]));
-                    Console.WriteLine(cardDeck.ToString());
+                    Card cardDeck = new Card();
+                    cardDeck.CardFace = cardF;
+                    cardDeck.CardSuits = validSuits[cardS];
+                    cards.Add(cardDeck);
+
                 }
                 catch(Exception ex) 
                 {
@@ -29,6 +40,7 @@
                 }
 
             }
+            Console.WriteLine(string.Join(' ', cards));
                 
         }
 
@@ -36,33 +48,31 @@
 
     public class Card
     {
-        private char cardFace;
-        private char cardSuit;
+        private string? cardFace;
+        private string? cardSuit;
 
-        public char CardFace
+        public string CardFace
         {
-            get { return cardFace; }
-            set { cardFace = value; }
+            get;
+            set;
         }
-        public char CardSuits
+        public string CardSuits
         {
-            get { return cardSuit; }
-            set { cardSuit = value; }
+            get;
+            set;
         }
 
 
-        public Card(char cardFace, char cardSuit) 
-        {
-            this.CardFace = cardFace;
-            this.CardSuits = cardSuit;
-        }
+        //public Card(string cardFace, Dictionary<string, string> cardSuit) 
+        //{
+        //    this.CardFace = cardFace;
+        //    this.CardSuits = cardSuit;
+        //}
         public override string ToString()
         {
             return $"[{CardFace}{CardSuits}]";
         }
 
     }
-    
-
 
 }
