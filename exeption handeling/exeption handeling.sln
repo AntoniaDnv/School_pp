@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "exeption handeling", "exept
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enter Nums", "Enter Nums\Enter Nums.csproj", "{079EBC23-6E15-4693-A60A-CDABC11DD352}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cards", "Cards\Cards.csproj", "{D6EB6700-4DFD-41CD-B248-580B4B229B42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cards", "Cards\Cards.csproj", "{D6EB6700-4DFD-41CD-B248-580B4B229B42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sum of intigers", "sum of intigers\sum of intigers.csproj", "{DCF5EC69-1486-4940-8243-3CF3F4B97964}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D6EB6700-4DFD-41CD-B248-580B4B229B42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6EB6700-4DFD-41CD-B248-580B4B229B42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6EB6700-4DFD-41CD-B248-580B4B229B42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCF5EC69-1486-4940-8243-3CF3F4B97964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCF5EC69-1486-4940-8243-3CF3F4B97964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCF5EC69-1486-4940-8243-3CF3F4B97964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCF5EC69-1486-4940-8243-3CF3F4B97964}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
