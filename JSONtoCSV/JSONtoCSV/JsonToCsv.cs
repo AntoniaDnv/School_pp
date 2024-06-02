@@ -9,6 +9,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using CsvHelper;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace JSONtoCSV
 {
@@ -97,5 +98,51 @@ namespace JSONtoCSV
         public static IEnumerable<Country> DeserializeJson(string responseAsString)
             => JsonConvert.DeserializeObject<IEnumerable<Country>>(responseAsString)
             .ToArray();
+
+        public static string GetCsv()
+        {
+            using StringWriter writer = new StringWriter();
+            CsvWriter csv = new CsvWriter(writer, CultureInfo.InvariantCulture);
+
+            csv.WriteField("name/common");
+            csv.WriteField("name/official");
+            csv.WriteField("region");
+            csv.WriteField("subregion");
+            csv.WriteField("capital");
+
+            csv.NextRecord();
+            foreach(Country country in countries)
+            {
+                var countryCommonName = country.Names.Commmon == null
+                    ? string.Empty
+                    : country.Names.Commmon;
+                csv.WriteField(countryCommonName);
+
+                var countryOffgicialName = country.Names.Official == null
+                    ? string.Empty
+                    : country.Names.Official;
+                csv.WriteField(countryOffgicialName);
+
+                var countryRegion = country.Region == null
+                 ? string.Empty
+                 : country.Region;
+                csv.WriteField(countryRegion);
+
+                var countrySubregion = country.Subregion == null
+                ? string.Empty
+                : country.Subregion;
+                csv.WriteField(countrySubregion);
+
+                var countryCapitals = country.Subregion == null
+               ? string.Empty
+               : string.Join(",", country.Capitals);
+                csv.WriteField(countrySubregion);
+
+                csv.NextRecord();
+
+
+            }
+            return writer.ToString();
+        }
     }
 }
