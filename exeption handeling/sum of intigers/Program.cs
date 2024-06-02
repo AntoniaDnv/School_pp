@@ -6,35 +6,34 @@ namespace sum_of_intigers
     {
         static void Main(string[] args)
         {
-           
-            int sum = 0;
-            int currentNum = 0;
-            try
-            {
-                int[] nums = Console.ReadLine()
-               .Split()
-               .Select(int.Parse)
-               .ToArray();
 
-                for (int i = 0; i < nums.Length; i++)
+          
+            string[] elements = Console.ReadLine().Split();
+
+            int sum = 0;
+
+            foreach (var element in elements)
+            {
+                try
                 {
-                    currentNum = nums[i];
-                    sum += currentNum;
-                    Console.WriteLine($"Element '{currentNum}' processed - current sum: {sum}");
+                    int number = int.Parse(element);
+                    sum += number;
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine($"The element '{element}' is in wrong format!");
+                }
+                catch (OverflowException)
+                {
+                    Console.WriteLine($"The element '{element}' is out of range!");
+                }
+                finally
+                {
+                    Console.WriteLine($"Element '{element}' processed - current sum: {sum}");
                 }
             }
-            catch(OverflowException)
-            {
-                Console.WriteLine($"The element {currentNum} is out of range!");
-            }
-            catch(FormatException)
-            {
-                Console.WriteLine($"The element {currentNum} is in wrong format!");
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+
+            Console.WriteLine($"The total sum of all integers is: {sum}");
         }
     }
 }

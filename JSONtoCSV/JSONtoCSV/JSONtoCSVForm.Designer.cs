@@ -49,7 +49,7 @@
             textBoxJson.ScrollBars = ScrollBars.Vertical;
             textBoxJson.Size = new Size(400, 400);
             textBoxJson.TabIndex = 2;
-            textBoxJson.TextChanged += textBoxJson_TextChanged;
+            textBoxJson.TextChanged += JsonTextBoxTextChanged;
             // 
             // textBoxCsv
             // 
@@ -61,6 +61,7 @@
             textBoxCsv.Size = new Size(400, 400);
             textBoxCsv.TabIndex = 3;
             textBoxCsv.WordWrap = false;
+            textBoxCsv.TextChanged += CsvTextBoxTextChanged;
             // 
             // textBoxUserInput
             // 
@@ -135,6 +136,7 @@
             btnConvert.Text = "Convert to CSV";
             btnConvert.UseVisualStyleBackColor = true;
             btnConvert.Visible = false;
+            btnConvert.Click += ConvertButtonClick;
             // 
             // JsonToCsvForm
             // 

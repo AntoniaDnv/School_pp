@@ -7,6 +7,7 @@ using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
+using CsvHelper;
 using System.Threading.Tasks;
 
 namespace JSONtoCSV
@@ -80,7 +81,6 @@ namespace JSONtoCSV
 
             string countriesAsJson = SerializeJson();
             return countriesAsJson;
-
         }
         public static Task<HttpResponseMessage> GetResponse(string userInput)
         {

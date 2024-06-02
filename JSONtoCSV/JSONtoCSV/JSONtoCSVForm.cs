@@ -51,11 +51,22 @@ namespace JSONtoCSV
 
         private void JsonTextBoxTextChanged(object sender, EventArgs e)
         {
-            if(textBoxJson.Text != string.Empty)
+            if (textBoxJson.Text != string.Empty)
             {
                 btnConvert.Visible = true;
                 btnConvert.Focus();
+                textBoxCsv.Clear();
             }
+        }
+
+        private void ConvertButtonClick(object sender, EventArgs e)
+        {
+            textBoxCsv.Text = JsonToCsv.GetCsv();
+        }
+
+        private void CsvTextBoxTextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
