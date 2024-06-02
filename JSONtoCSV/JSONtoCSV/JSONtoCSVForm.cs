@@ -66,7 +66,16 @@ namespace JSONtoCSV
 
         private void CsvTextBoxTextChanged(object sender, EventArgs e)
         {
-
+            if(textBoxCsv.Text != string.Empty)
+            {
+               textBoxUserInput.Focus();
+                btnConvert.Enabled = false;
+            }
+            else
+            {
+                btnConvert.Enabled=true;
+                btnConvert.Focus();
+            }
         }
     }
 }
