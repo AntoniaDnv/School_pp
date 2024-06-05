@@ -6,5 +6,10 @@ namespace My_Secret_Folder
         {
             InitializeComponent();
         }
+
+        private void InfoForFileLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
