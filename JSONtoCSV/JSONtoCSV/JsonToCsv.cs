@@ -33,25 +33,11 @@ namespace JSONtoCSV
 
             Match match = Regex.Match(userInput, userInputValidator);
 
-           //     if (!match.Success || !IsApiPathValid(match))
-             //   {
-             //      throw new Exception("Invalid input request");
-             //   }
+                if (!match.Success)
+                {
+                   throw new Exception("Invalid input request");
+                }
 
-        }
-        public static bool IsApiPathValid(Match match)
-        {
-            string path = match.Groups["path"].Value;
-            string[] allApiPaths = Enum.GetNames(typeof(ApiPath));
-
-            bool isPathValid = allApiPaths
-                .Any(x => x.Equals(path, StringComparison.OrdinalIgnoreCase));
-
-            if (isPathValid)
-            {
-                return true;
-            }
-            return false;
         }
 
         public static string GetJson(string userInput)
@@ -68,7 +54,7 @@ namespace JSONtoCSV
               throw new Exception("An error apeared! Try again.");
 
             }
-            //page 47 - needs testing!!!!
+            
              string responseAsString = ReadResponseAsStringAsync(response);
 
             try
@@ -101,10 +87,10 @@ namespace JSONtoCSV
 
         public static string GetCsv()
         {
-            using StringWriter writer = new StringWriter();
+            StringWriter writer = new StringWriter();
             CsvWriter csv = new CsvWriter(writer, CultureInfo.InvariantCulture);
 
-            csv.WriteField("postcode");
+            csv.WriteField("post code");
             csv.WriteField("country");
             csv.WriteField("country abbreviation");
             csv.WriteField("places/place name");
@@ -118,13 +104,14 @@ namespace JSONtoCSV
             foreach (CountryPlaces place in country.Places)
             {
                 csv.WriteField(country.PostCode);
-                csv.WriteField(country.CountryAbbr);
                 csv.WriteField(country.CountryName);
+                csv.WriteField(country.CountryAbbr);
                 csv.WriteField(place.PlaceName);
                 csv.WriteField(place.Longitude);
                 csv.WriteField(place.State);
-                csv.WriteField(place.State);
+            
                 csv.WriteField(place.StateAbbr);
+              
                 csv.WriteField(place.Latitude);
 
                 csv.NextRecord();

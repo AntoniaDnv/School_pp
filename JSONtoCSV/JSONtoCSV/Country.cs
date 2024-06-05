@@ -17,8 +17,7 @@ namespace JSONtoCSV
         [JsonProperty("country abbreviation")]
         public string CountryAbbr { get; set; } = null!;
 
-        public CountryPlaces[] Places { get; set; } = null;
-
-        
+        public CountryPlaces[] Places { get; set; } = null!;
+ 
     }
 }
