@@ -15,7 +15,7 @@ namespace JSONtoCSV
 {
     public static class JsonToCsv
     {
-        private static IEnumerable<Country> countries = new List<Country>();
+        private static Country country = new Country ();
        
        public static string SerializeJson()
         {
@@ -23,7 +23,7 @@ namespace JSONtoCSV
             {
                 ContractResolver = new CamelCasePropertyNamesContractResolver()  
             };
-            string serializedJson = JsonConvert.SerializeObject(countries,Formatting.Indented, settings);
+            string serializedJson = JsonConvert.SerializeObject(country,Formatting.Indented, settings);
             return serializedJson;
         }
 
@@ -33,10 +33,10 @@ namespace JSONtoCSV
 
             Match match = Regex.Match(userInput, userInputValidator);
 
-                if (!match.Success || !IsApiPathValid(match))
-                {
-                   throw new Exception("Invalid input request");
-                }
+           //     if (!match.Success || !IsApiPathValid(match))
+             //   {
+             //      throw new Exception("Invalid input request");
+             //   }
 
         }
         public static bool IsApiPathValid(Match match)
@@ -73,7 +73,7 @@ namespace JSONtoCSV
 
             try
             {
-                countries = DeserializeJson(responseAsString);
+                country = DeserializeJson(responseAsString);
             }
             catch (Exception )
             {
@@ -85,7 +85,7 @@ namespace JSONtoCSV
         }
         public static Task<HttpResponseMessage> GetResponse(string userInput)
         {
-            string url = $"https://restcountries.com/v3.1/%7BuserInput%7D{userInput}";
+            string url = $"https://api.zippopotam.us/{userInput}";
             HttpClient client = new HttpClient();
             Task<HttpResponseMessage> response = client.GetAsync(url);
             return response;
@@ -95,50 +95,29 @@ namespace JSONtoCSV
         public static string ReadResponseAsStringAsync(Task<HttpResponseMessage> response) 
             => response.Result.Content.ReadAsStringAsync().Result;
 
-        public static IEnumerable<Country> DeserializeJson(string responseAsString)
-            => JsonConvert.DeserializeObject<IEnumerable<Country>>(responseAsString)
-            .ToArray();
+        public static Country DeserializeJson(string responseAsString)
+            => JsonConvert.DeserializeObject<Country>(responseAsString);
+            
 
         public static string GetCsv()
         {
             using StringWriter writer = new StringWriter();
             CsvWriter csv = new CsvWriter(writer, CultureInfo.InvariantCulture);
 
-            csv.WriteField("name/common");
-            csv.WriteField("name/official");
-            csv.WriteField("region");
-            csv.WriteField("subregion");
-            csv.WriteField("capital");
+            csv.WriteField("postcode");
+            csv.WriteField("country");
+            csv.WriteField("country abbreviation");
+            csv.WriteField("places/place name");
+            csv.WriteField("places/longitude");
+            csv.WriteField("places/state");
+            csv.WriteField("places/state abbreviatio");
+            csv.WriteField("places/latitude");
 
             csv.NextRecord();
-            foreach(Country country in countries)
+
+            foreach (CountryPlaces place in country.Places)
             {
-                var countryCommonName = country.Names.Commmon == null
-                    ? string.Empty
-                    : country.Names.Commmon;
-                csv.WriteField(countryCommonName);
 
-                var countryOffgicialName = country.Names.Official == null
-                    ? string.Empty
-                    : country.Names.Official;
-                csv.WriteField(countryOffgicialName);
-
-                var countryRegion = country.Region == null
-                 ? string.Empty
-                 : country.Region;
-                csv.WriteField(countryRegion);
-
-                var countrySubregion = country.Subregion == null
-                ? string.Empty
-                : country.Subregion;
-                csv.WriteField(countrySubregion);
-
-                var countryCapitals = country.Subregion == null
-               ? string.Empty
-               : string.Join(",", country.Capitals);
-                csv.WriteField(countrySubregion);
-
-                csv.NextRecord();
 
 
             }

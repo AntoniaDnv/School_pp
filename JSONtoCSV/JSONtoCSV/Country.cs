@@ -9,14 +9,16 @@ namespace JSONtoCSV
 {
     public class Country
     {
-        [JsonProperty("name")]
-        public CountryName Names { get; set; }
+        [JsonProperty("post code")]
+        public string PostCode { get; set; } = null!;
+       
+        [JsonProperty("country")]
+        public string CountryName { get; set; } = null!;
+        [JsonProperty("country abbreviation")]
+        public string CountryAbbr { get; set; } = null!;
 
-        public string Region { get; set; }
-        public string Subregion { get; set; }
+        public CountryPlaces[] Places { get; set; } = null;
 
-        [JsonProperty("capital")]
-
-        public string[] Capitals { get; set; }
+        
     }
 }

@@ -36,6 +36,7 @@ namespace JSONtoCSV
             catch (Exception ex)
             {
                 DisplayInvalidInputMessage(ex.Message, "Error");
+                return;
             }
 
         }
@@ -66,16 +67,21 @@ namespace JSONtoCSV
 
         private void CsvTextBoxTextChanged(object sender, EventArgs e)
         {
-            if(textBoxCsv.Text != string.Empty)
+            if (textBoxCsv.Text != string.Empty)
             {
-               textBoxUserInput.Focus();
+                textBoxUserInput.Focus();
                 btnConvert.Enabled = false;
             }
             else
             {
-                btnConvert.Enabled=true;
+                btnConvert.Enabled = true;
                 btnConvert.Focus();
             }
+        }
+
+        private void labelEndPoints_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

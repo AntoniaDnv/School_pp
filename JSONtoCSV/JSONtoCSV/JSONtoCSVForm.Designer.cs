@@ -78,9 +78,9 @@
             labelUrl.ForeColor = SystemColors.Window;
             labelUrl.Location = new Point(307, 46);
             labelUrl.Name = "labelUrl";
-            labelUrl.Size = new Size(303, 28);
+            labelUrl.Size = new Size(247, 28);
             labelUrl.TabIndex = 9;
-            labelUrl.Text = "https://restcountries.com/v3.1/all";
+            labelUrl.Text = "https://api.zippopotam.us/";
             labelUrl.Click += labelUrl_Click;
             // 
             // labelEndPoints
@@ -91,9 +91,10 @@
             labelEndPoints.ForeColor = SystemColors.Window;
             labelEndPoints.Location = new Point(473, 295);
             labelEndPoints.Name = "labelEndPoints";
-            labelEndPoints.Size = new Size(151, 202);
+            labelEndPoints.Size = new Size(165, 102);
             labelEndPoints.TabIndex = 6;
-            labelEndPoints.Text = "Endpoints:\r\n-name/{name}\r\n(name/peru)\r\n-region/{region}\r\n(region/europe)\r\n-subregion/{region}\r\n(subregion/europe)\r\n-capital/{capital}\r\n(capital/lima)\r\n\r\n";
+            labelEndPoints.Text = "Endpoints:\r\n- country/postal-code\r\n (us/90210)\r\n- country/state/city\r\n (us/ma/belmont)\r\n";
+            labelEndPoints.Click += labelEndPoints_Click;
             // 
             // labelJson
             // 
