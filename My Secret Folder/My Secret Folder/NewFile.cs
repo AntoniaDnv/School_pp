@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace My_Secret_Folder
 {
-    public partial class NewTextFileForm : Form
+    public partial class NewFile : Form
     {
-        public NewTextFileForm()
+        public NewFile()
         {
             InitializeComponent();
-        }
-
-        private void labelFileContent_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

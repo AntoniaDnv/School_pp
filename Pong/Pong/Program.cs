@@ -12,6 +12,7 @@ namespace Pong
             Ball ball = new Ball(field.GetRows / 2, field.GetCols / 2);
 
             left.Draw(field);
+           
             right.Draw(field);
             ball.Draw(field);
 
@@ -33,8 +34,11 @@ namespace Pong
                         DrawAt(i, j, field.Get(i, j).ToString());
                     }
                 }
+
                 ReadInput(field, left, right);
+                
                 skipBall--;
+                
                 if (skipBall == 0)
                 {
                     int scored = CheckForGoal(field, ball);
@@ -58,6 +62,7 @@ namespace Pong
                     {
                         ball.CalculateTrajectory(field, left.Tile, right.Tile);
                     }
+                   
                     skipBall = 2;
                 }
 
@@ -85,7 +90,9 @@ namespace Pong
             {
                 return;
             }
+
             ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+
             switch (keyInfo.Key)
             {
                 case ConsoleKey.W:
@@ -185,13 +192,20 @@ namespace Pong
             for (int i = 0; i < this._length; i++)
             {
                 if (i + this._x >= 0 && i + this._x < field.GetRows)
+                {
                     field.Set(i + this._x, this._y, this.Tile);
+                }
+                   
             }
         }
 
         public void MoveUp(Field field)
         {
-            if (this._x <= 1) return;
+            if (this._x <= 1) 
+            {
+                return;
+
+            }
 
             field.Set(this._x + (this._length - 1), this._y, ' ');
             this._x--;
@@ -200,7 +214,12 @@ namespace Pong
 
         public void MoveDown(Field field)
         {
-            if (this._x + this._length >= field.GetRows - 1) return;
+            if (this._x + this._length >= field.GetRows - 1) 
+            {
+                return;
+            }
+           
+
 
             field.Set(this._x, this._y, ' ');
             this._x++;
@@ -212,7 +231,11 @@ namespace Pong
             for (int i = 0; i < this._length; i++)
             {
                 if (i + this._x >= 0 && i + this._x < field.GetRows)
+                {
                     field.Set(i + this._x, this._y, ' ');
+                }
+               
+                
             }
 
             this._x = this._initialX;
@@ -235,6 +258,7 @@ namespace Pong
         {
             this._x = this._initialX = x;
             this._y = this._initialY = y;
+
             this._tile = tile;
             this._isGoingDown = true;
             this._isGoingRight = true;
@@ -245,7 +269,10 @@ namespace Pong
         public void Draw(Field field)
         {
             if (_x >= 0 && _x < field.GetRows && _y >= 0 && _y < field.GetCols)
+            {
                 field.Set(this._x, this._y, this._tile);
+            }
+                
         }
 
         public void CalculateTrajectory(Field field, char leftRacketTile, char rightRacketTile)
@@ -253,7 +280,10 @@ namespace Pong
 
 
             if (_x >= 0 && _x < field.GetRows && _y >= 0 && _y < field.GetCols && field.Get(_x, _y) != '#')
+            {
                 field.Set(this._x, this._y, ' ');
+            }
+              
 
             if (_x - 1 < 0 || field.Get(_x - 1, _y) == '#')
             {
@@ -274,13 +304,18 @@ namespace Pong
 
             this._x = this._isGoingDown ? this._x + 1 : this._x - 1;
             this._y = this._isGoingRight ? this._y + 1 : this._y - 1;
+
             Draw(field);
         }
 
         public void Reset(Field field)
         {
             if (_x >= 0 && _x < field.GetRows && _y >= 0 && _y < field.GetCols && field.Get(_x, _y) != '#')
+            {
                 field.Set(this._x, this._y, ' ');
+            }
+              
+
 
             this._x = this._initialX;
             this._y = this._initialY;

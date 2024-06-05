@@ -28,56 +28,116 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
+            components = new System.ComponentModel.Container();
+            labelSecretFile = new Label();
+            labelFileName = new Label();
+            labelFileContent = new Label();
+            richTextBox1 = new RichTextBox();
+            butSave = new Button();
+            textBox1 = new TextBox();
+            errorProviderText = new ErrorProvider(components);
+            errorProviderFileName = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorProviderText).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProviderFileName).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // labelSecretFile
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(89, 78);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 0;
-            label1.Text = "label1";
+            labelSecretFile.AutoSize = true;
+            labelSecretFile.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            labelSecretFile.Location = new Point(158, 43);
+            labelSecretFile.Name = "labelSecretFile";
+            labelSecretFile.Size = new Size(472, 46);
+            labelSecretFile.TabIndex = 0;
+            labelSecretFile.Text = "Upload Your New Secret File";
             // 
-            // label2
+            // labelFileName
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(251, 89);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 20);
-            label2.TabIndex = 1;
-            label2.Text = "label2";
+            labelFileName.AutoSize = true;
+            labelFileName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelFileName.Location = new Point(602, 169);
+            labelFileName.Name = "labelFileName";
+            labelFileName.Size = new Size(149, 28);
+            labelFileName.TabIndex = 1;
+            labelFileName.Text = "Enter File Name";
             // 
-            // label3
+            // labelFileContent
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(397, 91);
-            label3.Name = "label3";
-            label3.Size = new Size(50, 20);
-            label3.TabIndex = 2;
-            label3.Text = "label3";
+            labelFileContent.AutoSize = true;
+            labelFileContent.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelFileContent.Location = new Point(53, 169);
+            labelFileContent.Name = "labelFileContent";
+            labelFileContent.Size = new Size(167, 28);
+            labelFileContent.TabIndex = 2;
+            labelFileContent.Text = "Enter File Content";
+            labelFileContent.Click += labelFileContent_Click;
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.BackColor = Color.Bisque;
+            richTextBox1.Location = new Point(53, 200);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(461, 199);
+            richTextBox1.TabIndex = 3;
+            richTextBox1.Text = "";
+            // 
+            // butSave
+            // 
+            butSave.BackColor = Color.CadetBlue;
+            butSave.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            butSave.ForeColor = SystemColors.ButtonFace;
+            butSave.Location = new Point(602, 319);
+            butSave.Name = "butSave";
+            butSave.Size = new Size(149, 65);
+            butSave.TabIndex = 4;
+            butSave.Text = "Save";
+            butSave.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.Bisque;
+            textBox1.Location = new Point(602, 200);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(139, 56);
+            textBox1.TabIndex = 5;
+            // 
+            // errorProviderText
+            // 
+            errorProviderText.ContainerControl = this;
+            // 
+            // errorProviderFileName
+            // 
+            errorProviderFileName.ContainerControl = this;
             // 
             // NewTextFileForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(textBox1);
+            Controls.Add(butSave);
+            Controls.Add(richTextBox1);
+            Controls.Add(labelFileContent);
+            Controls.Add(labelFileName);
+            Controls.Add(labelSecretFile);
             Name = "NewTextFileForm";
             Text = "NewTextFileForm";
+            ((System.ComponentModel.ISupportInitialize)errorProviderText).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProviderFileName).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
+        private Label labelSecretFile;
+        private Label labelFileName;
+        private Label labelFileContent;
+        private RichTextBox richTextBox1;
+        private Button butSave;
+        private TextBox textBox1;
+        private ErrorProvider errorProviderText;
+        private ErrorProvider errorProviderFileName;
     }
 }
