@@ -32,9 +32,9 @@
             labelFolderName = new Label();
             textBox1 = new TextBox();
             butEnter = new Button();
-            errorProvider1 = new ErrorProvider(components);
+            errorProviderForFolderName = new ErrorProvider(components);
             labelErrorProvider = new Label();
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProviderForFolderName).BeginInit();
             SuspendLayout();
             // 
             // labelFolderName
@@ -70,9 +70,9 @@
             butEnter.Text = "Enter";
             butEnter.UseVisualStyleBackColor = false;
             // 
-            // errorProvider1
+            // errorProviderForFolderName
             // 
-            errorProvider1.ContainerControl = this;
+            errorProviderForFolderName.ContainerControl = this;
             // 
             // labelErrorProvider
             // 
@@ -95,7 +95,7 @@
             Margin = new Padding(4, 4, 4, 4);
             Name = "NewFolder";
             Text = "NewFolder";
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProviderForFolderName).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -105,7 +105,7 @@
         private Label labelFolderName;
         private TextBox textBox1;
         private Button butEnter;
-        private ErrorProvider errorProvider1;
+        private ErrorProvider errorProviderForFolderName;
         private Label labelErrorProvider;
     }
 }

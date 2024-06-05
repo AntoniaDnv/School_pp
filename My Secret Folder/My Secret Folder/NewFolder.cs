@@ -12,9 +12,14 @@ namespace My_Secret_Folder
 {
     public partial class NewFolder : Form
     {
+        private readonly string filePath;
         public NewFolder()
         {
             InitializeComponent();
+            this.filePath = filePath;
         }
+
+        public string FolderName { get; private set; }
+        private         
     }
 }
