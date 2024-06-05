@@ -28,12 +28,84 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "NewFolder";
+            components = new System.ComponentModel.Container();
+            labelFolderName = new Label();
+            textBox1 = new TextBox();
+            butEnter = new Button();
+            errorProvider1 = new ErrorProvider(components);
+            labelErrorProvider = new Label();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            SuspendLayout();
+            // 
+            // labelFolderName
+            // 
+            labelFolderName.AutoSize = true;
+            labelFolderName.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            labelFolderName.Location = new Point(328, 54);
+            labelFolderName.Margin = new Padding(4, 0, 4, 0);
+            labelFolderName.Name = "labelFolderName";
+            labelFolderName.Size = new Size(427, 46);
+            labelFolderName.TabIndex = 0;
+            labelFolderName.Text = "Please Enter Folder Name";
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.Bisque;
+            textBox1.Location = new Point(273, 187);
+            textBox1.Margin = new Padding(4, 4, 4, 4);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(541, 49);
+            textBox1.TabIndex = 1;
+            // 
+            // butEnter
+            // 
+            butEnter.BackColor = Color.CadetBlue;
+            butEnter.ForeColor = SystemColors.ButtonHighlight;
+            butEnter.Location = new Point(409, 326);
+            butEnter.Margin = new Padding(4, 4, 4, 4);
+            butEnter.Name = "butEnter";
+            butEnter.Size = new Size(260, 69);
+            butEnter.TabIndex = 2;
+            butEnter.Text = "Enter";
+            butEnter.UseVisualStyleBackColor = false;
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
+            // labelErrorProvider
+            // 
+            labelErrorProvider.AutoSize = true;
+            labelErrorProvider.Location = new Point(108, 134);
+            labelErrorProvider.Name = "labelErrorProvider";
+            labelErrorProvider.Size = new Size(0, 25);
+            labelErrorProvider.TabIndex = 3;
+            // 
+            // NewFolder
+            // 
+            AutoScaleDimensions = new SizeF(11F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1100, 562);
+            Controls.Add(labelErrorProvider);
+            Controls.Add(butEnter);
+            Controls.Add(textBox1);
+            Controls.Add(labelFolderName);
+            Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            Margin = new Padding(4, 4, 4, 4);
+            Name = "NewFolder";
+            Text = "NewFolder";
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label labelFolderName;
+        private TextBox textBox1;
+        private Button butEnter;
+        private ErrorProvider errorProvider1;
+        private Label labelErrorProvider;
     }
 }
