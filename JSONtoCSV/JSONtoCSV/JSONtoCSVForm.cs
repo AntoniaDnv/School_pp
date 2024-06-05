@@ -16,8 +16,10 @@ namespace JSONtoCSV
 
         private void RequestButtonClick(object sender, EventArgs e)
         {
-            string userInput = $"{textBoxUserInput.Text}/";
 
+            string userInput = textBoxUserInput.Text;
+
+            // Check for invalid user input
             try
             {
                 JsonToCsv.CheckUserInput(userInput);
@@ -28,10 +30,10 @@ namespace JSONtoCSV
                 return;
             }
 
+            // Get JSON and display it in text box
             try
             {
                 textBoxJson.Text = JsonToCsv.GetJson(userInput);
-
             }
             catch (Exception ex)
             {
