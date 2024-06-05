@@ -117,9 +117,17 @@ namespace JSONtoCSV
 
             foreach (CountryPlaces place in country.Places)
             {
+                csv.WriteField(country.PostCode);
+                csv.WriteField(country.CountryAbbr);
+                csv.WriteField(country.CountryName);
+                csv.WriteField(place.PlaceName);
+                csv.WriteField(place.Longitude);
+                csv.WriteField(place.State);
+                csv.WriteField(place.State);
+                csv.WriteField(place.StateAbbr);
+                csv.WriteField(place.Latitude);
 
-
-
+                csv.NextRecord();
             }
             return writer.ToString();
         }
