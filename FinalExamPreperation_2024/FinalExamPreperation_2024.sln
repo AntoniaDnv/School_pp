@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnigmaMachine", "FinalExamPreperation_2024\EnigmaMachine.csproj", "{F3481103-F758-485C-8B23-F2C66D9F33ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdAstra", "AdAstra\AdAstra.csproj", "{B81AC5C0-EB11-41E6-81A9-4F4557CFE593}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3481103-F758-485C-8B23-F2C66D9F33ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3481103-F758-485C-8B23-F2C66D9F33ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3481103-F758-485C-8B23-F2C66D9F33ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3481103-F758-485C-8B23-F2C66D9F33ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B81AC5C0-EB11-41E6-81A9-4F4557CFE593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B81AC5C0-EB11-41E6-81A9-4F4557CFE593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B81AC5C0-EB11-41E6-81A9-4F4557CFE593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B81AC5C0-EB11-41E6-81A9-4F4557CFE593}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9EAA195E-876F-4FE3-AC2C-5BCF88A3AEBA}
+	EndGlobalSection
+EndGlobal
