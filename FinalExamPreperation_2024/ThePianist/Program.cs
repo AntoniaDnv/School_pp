@@ -78,6 +78,11 @@ namespace ThePianist
                         break;
                 }
             }
+
+            foreach(var piece in pieces.OrderBy(x => x.Key).ThenBy(x => x.Value[0]))
+            {
+                Console.WriteLine($"{piece.Key} -> Composer: {piece.Value[0]}, Key: {piece.Value[1]}");
+            }
         }
     }
 }
