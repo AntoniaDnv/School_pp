@@ -27,7 +27,7 @@ namespace tennisScor4eApp
         private void OnLoad(object sender, EventArgs e)
         {
 
-            FillRankingLsitView();
+            //  FillRankingLsitView();
             //FillLatestGamesView();
         }
         private void FillRankingLsitView()
@@ -41,6 +41,19 @@ namespace tennisScor4eApp
                 rollInRanckingListView.SubItems[0].Text = playerName;
                 rollInRanckingListView.SubItems.Add(playerPoints);
                 this.LVRanking.Items.Add(rollInRanckingListView);
+            }
+        }
+
+        private void FillLatestGamesView()
+        {
+            this.LVLatestGames.Items.Clear();
+            // ne znam dali e ToList()
+            foreach (var game in games.ToList())
+            {
+                foreach (var item in game.Value)
+                {
+                    //FillListView(game.Key, item);
+                }
             }
         }
 

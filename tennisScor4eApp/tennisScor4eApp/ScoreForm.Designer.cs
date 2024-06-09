@@ -39,11 +39,11 @@
             lblTennisHeading = new Label();
             label2 = new Label();
             LVRanking = new ListView();
-            playerNameColumn = new ColumnHeader();
+            palyerNameColumn = new ColumnHeader();
             scoreColumn = new ColumnHeader();
             label1 = new Label();
             btnAddNewGame = new Button();
-            listView2 = new ListView();
+            LVLatestGames = new ListView();
             colFirstPlayer = new ColumnHeader();
             colSecondPlayer = new ColumnHeader();
             colWinner = new ColumnHeader();
@@ -86,7 +86,7 @@
             // LVRanking
             // 
             LVRanking.BackColor = Color.Coral;
-            LVRanking.Columns.AddRange(new ColumnHeader[] { playerNameColumn, scoreColumn });
+            LVRanking.Columns.AddRange(new ColumnHeader[] { palyerNameColumn, scoreColumn });
             LVRanking.Location = new Point(17, 102);
             LVRanking.Name = "LVRanking";
             LVRanking.Size = new Size(771, 107);
@@ -94,11 +94,11 @@
             LVRanking.UseCompatibleStateImageBehavior = false;
             LVRanking.View = View.Details;
             // 
-            // playerNameColumn
+            // palyerNameColumn
             // 
-            playerNameColumn.Name = "Form1";
-            playerNameColumn.Text = "Palyer Name";
-            playerNameColumn.Width = 110;
+            palyerNameColumn.Name = "Form1";
+            palyerNameColumn.Text = "Palyer Name";
+            palyerNameColumn.Width = 110;
             // 
             // scoreColumn
             // 
@@ -123,16 +123,16 @@
             btnAddNewGame.Text = "Add New Game";
             btnAddNewGame.UseVisualStyleBackColor = true;
             // 
-            // listView2
+            // LVLatestGames
             // 
-            listView2.BackColor = Color.Coral;
-            listView2.Columns.AddRange(new ColumnHeader[] { colFirstPlayer, colSecondPlayer, colWinner, colScore });
-            listView2.Location = new Point(17, 313);
-            listView2.Name = "listView2";
-            listView2.Size = new Size(771, 121);
-            listView2.TabIndex = 7;
-            listView2.UseCompatibleStateImageBehavior = false;
-            listView2.View = View.Details;
+            LVLatestGames.BackColor = Color.Coral;
+            LVLatestGames.Columns.AddRange(new ColumnHeader[] { colFirstPlayer, colSecondPlayer, colWinner, colScore });
+            LVLatestGames.Location = new Point(17, 313);
+            LVLatestGames.Name = "LVLatestGames";
+            LVLatestGames.Size = new Size(771, 121);
+            LVLatestGames.TabIndex = 7;
+            LVLatestGames.UseCompatibleStateImageBehavior = false;
+            LVLatestGames.View = View.Details;
             // 
             // colFirstPlayer
             // 
@@ -169,7 +169,7 @@
             BackColor = Color.LemonChiffon;
             ClientSize = new Size(800, 450);
             Controls.Add(label3);
-            Controls.Add(listView2);
+            Controls.Add(LVLatestGames);
             Controls.Add(btnAddNewGame);
             Controls.Add(label1);
             Controls.Add(LVRanking);
@@ -190,16 +190,16 @@
         private Label lblTennisHeading;
         private Label label2;
         private ListView LVRanking;
-        private ColumnHeader Name;
+        private ColumnHeader palyerNameColumn;
         private ColumnHeader scoreColumn;
         private Label label1;
         private Button btnAddNewGame;
-        private ListView listView2;
+        private ListView LVLatestGames;
         private ColumnHeader colFirstPlayer;
         private ColumnHeader colSecondPlayer;
         private ColumnHeader colWinner;
         private ColumnHeader colScore;
         private Label label3;
-        private ColumnHeader playerNameColumn;
+       
     }
 }
