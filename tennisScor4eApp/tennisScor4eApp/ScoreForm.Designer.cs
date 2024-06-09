@@ -39,8 +39,8 @@
             lblTennisHeading = new Label();
             label2 = new Label();
             LVRanking = new ListView();
-            Name = new ColumnHeader();
-            Score = new ColumnHeader();
+            playerNameColumn = new ColumnHeader();
+            scoreColumn = new ColumnHeader();
             label1 = new Label();
             btnAddNewGame = new Button();
             listView2 = new ListView();
@@ -86,7 +86,7 @@
             // LVRanking
             // 
             LVRanking.BackColor = Color.Coral;
-            LVRanking.Columns.AddRange(new ColumnHeader[] { Name, Score });
+            LVRanking.Columns.AddRange(new ColumnHeader[] { playerNameColumn, scoreColumn });
             LVRanking.Location = new Point(17, 102);
             LVRanking.Name = "LVRanking";
             LVRanking.Size = new Size(771, 107);
@@ -94,13 +94,15 @@
             LVRanking.UseCompatibleStateImageBehavior = false;
             LVRanking.View = View.Details;
             // 
-            // Name
+            // playerNameColumn
             // 
-            Name.Text = "Name";
+            playerNameColumn.Name = "Form1";
+            playerNameColumn.Text = "Palyer Name";
+            playerNameColumn.Width = 110;
             // 
-            // Score
+            // scoreColumn
             // 
-            Score.Text = "Score";
+            scoreColumn.Text = "Score";
             // 
             // label1
             // 
@@ -135,10 +137,12 @@
             // colFirstPlayer
             // 
             colFirstPlayer.Text = "First Player";
+            colFirstPlayer.Width = 90;
             // 
             // colSecondPlayer
             // 
             colSecondPlayer.Text = "Second Player";
+            colSecondPlayer.Width = 110;
             // 
             // colWinner
             // 
@@ -158,7 +162,7 @@
             label3.TabIndex = 8;
             label3.Text = "*click on button to add new player";
             // 
-            // Form1
+            // ScoreForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -173,7 +177,7 @@
             Controls.Add(lblTennisHeading);
             Controls.Add(lblRanking);
             ForeColor = SystemColors.ControlText;
-            this.Name.Name = "Form1";
+            Name = "ScoreForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ScoreApp";
             ResumeLayout(false);
@@ -187,7 +191,7 @@
         private Label label2;
         private ListView LVRanking;
         private ColumnHeader Name;
-        private ColumnHeader Score;
+        private ColumnHeader scoreColumn;
         private Label label1;
         private Button btnAddNewGame;
         private ListView listView2;
@@ -196,5 +200,6 @@
         private ColumnHeader colWinner;
         private ColumnHeader colScore;
         private Label label3;
+        private ColumnHeader playerNameColumn;
     }
 }

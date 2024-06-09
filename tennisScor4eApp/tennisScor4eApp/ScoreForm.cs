@@ -3,7 +3,7 @@ namespace tennisScor4eApp
     public partial class ScoreForm : Form
     {
         private static Dictionary<string, int> playersWithPoints = new()
-                    {
+        {
             {"R. Federer", 4 },
              {"G. Dimitrov", 5},
               {"R. Nadal", 4 },
@@ -27,7 +27,7 @@ namespace tennisScor4eApp
         private void OnLoad(object sender, EventArgs e)
         {
 
-            //FillRankingLsitView();
+            FillRankingLsitView();
             //FillLatestGamesView();
         }
         private void FillRankingLsitView()
