@@ -1,6 +1,6 @@
 namespace tennisScor4eApp
 {
-    public partial class Form1 : Form
+    public partial class ScoreForm : Form
     {
         private static Dictionary<string, int> playersWithPoints = new()
                     {
@@ -9,7 +9,7 @@ namespace tennisScor4eApp
               {"R. Nadal", 4 },
         };
         private static Dictionary<(string, int), List<(string, int)>> games = new();
-        public Form1()
+        public ScoreForm()
         {
             InitializeComponent();
         }
@@ -26,18 +26,21 @@ namespace tennisScor4eApp
 
         private void OnLoad(object sender, EventArgs e)
         {
+
             //FillRankingLsitView();
             //FillLatestGamesView();
         }
         private void FillRankingLsitView()
         {
             this.LVRanking.Items.Clear();
-            foreach(var player in playersWithPoints.OrderByDescending(x => x.Value))
+            foreach (var player in playersWithPoints.OrderByDescending(x => x.Value))
             {
                 string playerName = player.Key;
                 string playerPoints = player.Value.ToString();
-
-                
+                ListViewItem rollInRanckingListView = new();
+                rollInRanckingListView.SubItems[0].Text = playerName;
+                rollInRanckingListView.SubItems.Add(playerPoints);
+                this.LVRanking.Items.Add(rollInRanckingListView);
             }
         }
 

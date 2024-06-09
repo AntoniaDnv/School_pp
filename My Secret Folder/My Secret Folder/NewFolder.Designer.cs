@@ -30,8 +30,8 @@
         {
             components = new System.ComponentModel.Container();
             labelFolderName = new Label();
-            textBox1 = new TextBox();
-            butEnter = new Button();
+            textBoxFolderName = new TextBox();
+            buttonEnter = new Button();
             errorProviderForFolderName = new ErrorProvider(components);
             labelErrorProvider = new Label();
             ((System.ComponentModel.ISupportInitialize)errorProviderForFolderName).BeginInit();
@@ -48,27 +48,27 @@
             labelFolderName.TabIndex = 0;
             labelFolderName.Text = "Please Enter Folder Name";
             // 
-            // textBox1
+            // textBoxFolderName
             // 
-            textBox1.BackColor = Color.Bisque;
-            textBox1.Location = new Point(273, 187);
-            textBox1.Margin = new Padding(4, 4, 4, 4);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(541, 49);
-            textBox1.TabIndex = 1;
+            textBoxFolderName.BackColor = Color.Bisque;
+            textBoxFolderName.Location = new Point(273, 187);
+            textBoxFolderName.Margin = new Padding(4);
+            textBoxFolderName.Multiline = true;
+            textBoxFolderName.Name = "textBoxFolderName";
+            textBoxFolderName.Size = new Size(541, 49);
+            textBoxFolderName.TabIndex = 1;
             // 
-            // butEnter
+            // buttonEnter
             // 
-            butEnter.BackColor = Color.CadetBlue;
-            butEnter.ForeColor = SystemColors.ButtonHighlight;
-            butEnter.Location = new Point(409, 326);
-            butEnter.Margin = new Padding(4, 4, 4, 4);
-            butEnter.Name = "butEnter";
-            butEnter.Size = new Size(260, 69);
-            butEnter.TabIndex = 2;
-            butEnter.Text = "Enter";
-            butEnter.UseVisualStyleBackColor = false;
+            buttonEnter.BackColor = Color.CadetBlue;
+            buttonEnter.ForeColor = SystemColors.ButtonHighlight;
+            buttonEnter.Location = new Point(409, 326);
+            buttonEnter.Margin = new Padding(4);
+            buttonEnter.Name = "buttonEnter";
+            buttonEnter.Size = new Size(260, 69);
+            buttonEnter.TabIndex = 2;
+            buttonEnter.Text = "Enter";
+            buttonEnter.UseVisualStyleBackColor = false;
             // 
             // errorProviderForFolderName
             // 
@@ -88,11 +88,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1100, 562);
             Controls.Add(labelErrorProvider);
-            Controls.Add(butEnter);
-            Controls.Add(textBox1);
+            Controls.Add(buttonEnter);
+            Controls.Add(textBoxFolderName);
             Controls.Add(labelFolderName);
             Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            Margin = new Padding(4, 4, 4, 4);
+            Margin = new Padding(4);
             Name = "NewFolder";
             Text = "NewFolder";
             ((System.ComponentModel.ISupportInitialize)errorProviderForFolderName).EndInit();
@@ -103,8 +103,8 @@
         #endregion
 
         private Label labelFolderName;
-        private TextBox textBox1;
-        private Button butEnter;
+        private TextBox textBoxFolderName;
+        private Button buttonEnter;
         private ErrorProvider errorProviderForFolderName;
         private Label labelErrorProvider;
     }

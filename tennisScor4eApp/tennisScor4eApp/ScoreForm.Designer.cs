@@ -1,6 +1,6 @@
 ﻿namespace tennisScor4eApp
 {
-    partial class Form1
+    partial class ScoreForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -19,6 +19,13 @@
             }
             base.Dispose(disposing);
         }
+        /* private void InitializeComponent()
+         {
+             // in the instruction it says the method is commented for now 
+             Load += OnLoad;
+             ResumeLayout(false);
+             PerformLayout();
+         } */
 
         #region Windows Form Designer generated code
 
@@ -166,7 +173,7 @@
             Controls.Add(lblTennisHeading);
             Controls.Add(lblRanking);
             ForeColor = SystemColors.ControlText;
-            Name = "Form1";
+            this.Name.Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ScoreApp";
             ResumeLayout(false);
