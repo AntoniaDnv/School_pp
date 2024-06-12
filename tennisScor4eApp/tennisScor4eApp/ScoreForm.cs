@@ -1,3 +1,6 @@
+using System.Numerics;
+using System.Reflection;
+
 namespace tennisScor4eApp
 {
     public partial class ScoreForm : Form
@@ -8,7 +11,15 @@ namespace tennisScor4eApp
              {"G. Dimitrov", 5},
               {"R. Nadal", 4 },
         };
-        private static Dictionary<(string, int), List<(string, int)>> games = new();
+
+        private static Dictionary<(string, int), List<(string, int)>> games = new Dictionary<(string, int), List<(string, int)>>()
+        {
+            { ("G. Dimitrov", 3), new List<(string, int)>() { ("R. Nadal", 2) } },
+            { ("R. Nadal", 3), new List<(string, int)>() { ("R. Federer", 1) } },
+            { ("G. Dimitrov", 2), new List<(string, int)>() { ("R. Federer", 3) } },
+        };
+
+
         public ScoreForm()
         {
             InitializeComponent();
@@ -27,8 +38,8 @@ namespace tennisScor4eApp
         private void OnLoad(object sender, EventArgs e)
         {
 
-            //  FillRankingLsitView();
-            //FillLatestGamesView();
+            FillRankingLsitView();
+            FillLatestGamesView();
         }
         private void FillRankingLsitView()
         {
@@ -48,21 +59,82 @@ namespace tennisScor4eApp
         {
             this.LVLatestGames.Items.Clear();
             // ne znam dali e ToList()
-            foreach (var game in games.ToList())
+            foreach (var game in games)
             {
                 foreach (var item in game.Value)
                 {
-                    //FillListView(game.Key, item);
+                    FillListView(game.Key, item);
                 }
             }
         }
 
-        private void FillListView((string, int) firstPlayer,(string, int) secondPlayer)
+        private void FillListView((string, int) firstPlayer, (string, int) secondPlayer)
         {
-           // string winner = GetWinner(firstPlayer, secondPlayer);
+            // string winner = GetWinner(firstPlayer, secondPlayer);
 
             ListViewItem rollInLatestGamesListView = new ListViewItem();
-            rollInLatestGamesListView.SubItems[0].Text =
+            rollInLatestGamesListView.SubItems[0].Text = firstPlayer.Item1;
+            rollInLatestGamesListView.SubItems.Add(secondPlayer.Item1);
+            // rollInLatestGamesListView.SubItems.Add(winner);
+            rollInLatestGamesListView.SubItems.Add($"{firstPlayer.Item2} : {secondPlayer.Item2}");
+
+            this.LVLatestGames.Items.Add(rollInLatestGamesListView);
+        }
+
+        private string GetWinner((string, int) firstPlayer, (string, int) secondPlayer)
+        {
+            if (firstPlayer.Item2 > secondPlayer.Item2)
+            {
+                return firstPlayer.Item1;
+            }
+            else if (firstPlayer.Item2 < secondPlayer.Item2)
+            {
+                return secondPlayer.Item1;
+            }
+
+            return "Draw";
+        }
+
+        private void AddNewGameButtonClick(object sender, EventArgs e)
+        {
+            using (newGame newGameForm = new newGame())
+            {
+                if (newGameForm.ShowDialog() == DialogResult.OK)
+                {
+                    AddNewGame(newGameForm.FirstPlayer, newGameForm.SecondPlayer);
+                }
+            }
+
+
+        }
+        private void AddNewGame((string, int) firstPlayer, (string, int) secondPlayer)
+        {
+            FillGamesData(firstPlayer, secondPlayer);
+            // FillPlayerWithPoints(firstPlayer);
+            // FillPlayerWithPoints(secondPlayer);
+
+            FillRankingLsitView();
+            FillLatestGamesView();
+
+        }
+        private void FillGamesData((string, int) firstPlayer,(string, int) secondPlayer)
+        {
+            if (games.ContainsKey(firstPlayer))
+            {
+                games[firstPlayer].Add(secondPlayer);
+            }
+            else if (games.ContainsKey(secondPlayer))
+            {
+                games[secondPlayer].Add(firstPlayer);
+            }
+            else
+            {
+                games.Add(firstPlayer, new List<(string, int)>() { secondPlayer });
+            }
+        }
+        private void FillPlayerWithPoints((string, int) player)
+        {
+
         }
     }
 }

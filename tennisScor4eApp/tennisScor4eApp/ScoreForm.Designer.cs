@@ -39,7 +39,7 @@
             lblTennisHeading = new Label();
             label2 = new Label();
             LVRanking = new ListView();
-            palyerNameColumn = new ColumnHeader();
+            Form1 = new ColumnHeader();
             scoreColumn = new ColumnHeader();
             label1 = new Label();
             btnAddNewGame = new Button();
@@ -86,7 +86,7 @@
             // LVRanking
             // 
             LVRanking.BackColor = Color.Coral;
-            LVRanking.Columns.AddRange(new ColumnHeader[] { palyerNameColumn, scoreColumn });
+            LVRanking.Columns.AddRange(new ColumnHeader[] { Form1, scoreColumn });
             LVRanking.Location = new Point(17, 102);
             LVRanking.Name = "LVRanking";
             LVRanking.Size = new Size(771, 107);
@@ -94,11 +94,11 @@
             LVRanking.UseCompatibleStateImageBehavior = false;
             LVRanking.View = View.Details;
             // 
-            // palyerNameColumn
+            // Form1
             // 
-            palyerNameColumn.Name = "Form1";
-            palyerNameColumn.Text = "Palyer Name";
-            palyerNameColumn.Width = 110;
+            Form1.Name = "Form1";
+            Form1.Text = "Palyer Name";
+            Form1.Width = 110;
             // 
             // scoreColumn
             // 
@@ -122,6 +122,7 @@
             btnAddNewGame.TabIndex = 5;
             btnAddNewGame.Text = "Add New Game";
             btnAddNewGame.UseVisualStyleBackColor = true;
+            btnAddNewGame.Click += AddNewGameButtonClick;
             // 
             // LVLatestGames
             // 
@@ -200,6 +201,6 @@
         private ColumnHeader colWinner;
         private ColumnHeader colScore;
         private Label label3;
-       
+        private ColumnHeader Form1;
     }
 }
