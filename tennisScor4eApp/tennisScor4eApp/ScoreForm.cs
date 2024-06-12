@@ -57,5 +57,12 @@ namespace tennisScor4eApp
             }
         }
 
+        private void FillListView((string, int) firstPlayer,(string, int) secondPlayer)
+        {
+           // string winner = GetWinner(firstPlayer, secondPlayer);
+
+            ListViewItem rollInLatestGamesListView = new ListViewItem();
+            rollInLatestGamesListView.SubItems[0].Text =
+        }
     }
 }
