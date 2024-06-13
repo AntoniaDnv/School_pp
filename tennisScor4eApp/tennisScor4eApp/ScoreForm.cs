@@ -110,7 +110,7 @@ namespace tennisScor4eApp
         private void AddNewGame((string, int) firstPlayer, (string, int) secondPlayer)
         {
             FillGamesData(firstPlayer, secondPlayer);
-            // FillPlayerWithPoints(firstPlayer);
+             FillPlayerWithPoints(firstPlayer);
             // FillPlayerWithPoints(secondPlayer);
 
             FillRankingLsitView();
@@ -134,7 +134,14 @@ namespace tennisScor4eApp
         }
         private void FillPlayerWithPoints((string, int) player)
         {
-
+            if (playersWithPoints.ContainsKey(player.Item1))
+            {
+                playersWithPoints[player.Item1] += player.Item2;
+            }
+            else
+            {
+                playersWithPoints.Add(player.Item1, player.Item2);
+            }
         }
     }
 }

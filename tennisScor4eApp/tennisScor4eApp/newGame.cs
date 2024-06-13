@@ -16,7 +16,8 @@ namespace tennisScor4eApp
         {
             InitializeComponent();
         }
-
+        public (string, int) FirstPlayer { get; internal set; }
+        public (string, int) SecondPlayer { get; internal set; }
         private void label1_Click(object sender, EventArgs e)
         {
 

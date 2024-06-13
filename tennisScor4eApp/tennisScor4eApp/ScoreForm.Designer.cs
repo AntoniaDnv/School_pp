@@ -184,7 +184,10 @@
             ResumeLayout(false);
             PerformLayout();
         }
+        private void ViewProfileOnClick()
+        {
 
+        }
         #endregion
 
         private Label lblRanking;
