@@ -1,6 +1,10 @@
-﻿namespace tennisScor4eApp
+﻿using static System.Net.Mime.MediaTypeNames;
+using System.Windows.Forms;
+using System.Xml.Linq;
+
+namespace tennisScor4eApp
 {
-    partial class newGame
+    partial class NewGameForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,27 +32,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             lblNewGame = new Label();
             lblFirstPlayer = new Label();
             lblSecondPlayer = new Label();
             lblpoints1 = new Label();
             points2 = new Label();
-            numericUpDownFirstPlayerPoints = new NumericUpDown();
-            numericUpDownSecondPlayerPoints = new NumericUpDown();
+            numericUpDown1 = new NumericUpDown();
+            numericUpDown2 = new NumericUpDown();
             butSave = new Button();
             lblVS = new Label();
             txtFirstPlayer = new TextBox();
             txtSecondPlayer = new TextBox();
-            errorProviderFirstName = new ErrorProvider(components);
-            errorProviderSecondName = new ErrorProvider(components);
-            labelErrorFirstName = new Label();
-            labelErrorSecondName = new Label();
-            labelSameNameErrorMessage = new Label();
-            ((System.ComponentModel.ISupportInitialize)numericUpDownFirstPlayerPoints).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDownSecondPlayerPoints).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)errorProviderFirstName).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)errorProviderSecondName).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             SuspendLayout();
             // 
             // lblNewGame
@@ -101,22 +97,22 @@
             points2.Text = "points";
             points2.Click += label5_Click;
             // 
-            // numericUpDownFirstPlayerPoints
+            // numericUpDown1
             // 
-            numericUpDownFirstPlayerPoints.BackColor = Color.Coral;
-            numericUpDownFirstPlayerPoints.Location = new Point(84, 258);
-            numericUpDownFirstPlayerPoints.Name = "numericUpDownFirstPlayerPoints";
-            numericUpDownFirstPlayerPoints.Size = new Size(50, 27);
-            numericUpDownFirstPlayerPoints.TabIndex = 3;
-            numericUpDownFirstPlayerPoints.ValueChanged += numericUpDown1_ValueChanged;
+            numericUpDown1.BackColor = Color.Coral;
+            numericUpDown1.Location = new Point(84, 258);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(50, 27);
+            numericUpDown1.TabIndex = 3;
+            numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
             // 
-            // numericUpDownSecondPlayerPoints
+            // numericUpDown2
             // 
-            numericUpDownSecondPlayerPoints.BackColor = Color.Coral;
-            numericUpDownSecondPlayerPoints.Location = new Point(564, 263);
-            numericUpDownSecondPlayerPoints.Name = "numericUpDownSecondPlayerPoints";
-            numericUpDownSecondPlayerPoints.Size = new Size(50, 27);
-            numericUpDownSecondPlayerPoints.TabIndex = 4;
+            numericUpDown2.BackColor = Color.Coral;
+            numericUpDown2.Location = new Point(564, 263);
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new Size(50, 27);
+            numericUpDown2.TabIndex = 4;
             // 
             // butSave
             // 
@@ -156,67 +152,27 @@
             txtSecondPlayer.Size = new Size(125, 27);
             txtSecondPlayer.TabIndex = 2;
             // 
-            // errorProviderFirstName
-            // 
-            errorProviderFirstName.ContainerControl = this;
-            // 
-            // errorProviderSecondName
-            // 
-            errorProviderSecondName.ContainerControl = this;
-            // 
-            // labelErrorFirstName
-            // 
-            labelErrorFirstName.AutoSize = true;
-            labelErrorFirstName.Location = new Point(77, 172);
-            labelErrorFirstName.Name = "labelErrorFirstName";
-            labelErrorFirstName.Size = new Size(50, 20);
-            labelErrorFirstName.TabIndex = 9;
-            labelErrorFirstName.Text = "label1";
-            // 
-            // labelErrorSecondName
-            // 
-            labelErrorSecondName.AutoSize = true;
-            labelErrorSecondName.Location = new Point(561, 174);
-            labelErrorSecondName.Name = "labelErrorSecondName";
-            labelErrorSecondName.Size = new Size(50, 20);
-            labelErrorSecondName.TabIndex = 10;
-            labelErrorSecondName.Text = "label1";
-            // 
-            // labelSameNameErrorMessage
-            // 
-            labelSameNameErrorMessage.AutoSize = true;
-            labelSameNameErrorMessage.Location = new Point(93, 377);
-            labelSameNameErrorMessage.Name = "labelSameNameErrorMessage";
-            labelSameNameErrorMessage.Size = new Size(50, 20);
-            labelSameNameErrorMessage.TabIndex = 11;
-            labelSameNameErrorMessage.Text = "label1";
-            // 
-            // newGame
+            // NewGameForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LemonChiffon;
             ClientSize = new Size(800, 450);
-            Controls.Add(labelSameNameErrorMessage);
-            Controls.Add(labelErrorSecondName);
-            Controls.Add(labelErrorFirstName);
             Controls.Add(txtSecondPlayer);
             Controls.Add(txtFirstPlayer);
             Controls.Add(lblVS);
             Controls.Add(butSave);
-            Controls.Add(numericUpDownSecondPlayerPoints);
-            Controls.Add(numericUpDownFirstPlayerPoints);
+            Controls.Add(numericUpDown2);
+            Controls.Add(numericUpDown1);
             Controls.Add(points2);
             Controls.Add(lblpoints1);
             Controls.Add(lblSecondPlayer);
             Controls.Add(lblFirstPlayer);
             Controls.Add(lblNewGame);
-            Name = "newGame";
-            Text = "newGame";
-            ((System.ComponentModel.ISupportInitialize)numericUpDownFirstPlayerPoints).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDownSecondPlayerPoints).EndInit();
-            ((System.ComponentModel.ISupportInitialize)errorProviderFirstName).EndInit();
-            ((System.ComponentModel.ISupportInitialize)errorProviderSecondName).EndInit();
+            Name = "NewGameForm";
+            Text = "NewGameForm";
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -228,16 +184,10 @@
         private Label lblSecondPlayer;
         private Label lblpoints1;
         private Label points2;
-        private NumericUpDown numericUpDownFirstPlayerPoints;
-        private NumericUpDown numericUpDownSecondPlayerPoints;
+        private NumericUpDown numericUpDown1;
+        private NumericUpDown numericUpDown2;
         private Button butSave;
         private Label lblVS;
         private TextBox txtFirstPlayer;
         private TextBox txtSecondPlayer;
-        private ErrorProvider errorProviderFirstName;
-        private ErrorProvider errorProviderSecondName;
-        private Label labelSameNameErrorMessage;
-        private Label labelErrorSecondName;
-        private Label labelErrorFirstName;
     }
-}

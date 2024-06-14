@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace tennisScor4eApp
+namespace tennistest
 {
-    public partial class PlayerNameForm : Form
+    public partial class NewGameForm : Form
     {
-        public PlayerNameForm()
+        public NewGameForm()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

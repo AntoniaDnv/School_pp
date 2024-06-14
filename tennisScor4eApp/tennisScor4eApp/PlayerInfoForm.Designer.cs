@@ -52,7 +52,7 @@
             lblPlayerName.Size = new Size(190, 38);
             lblPlayerName.TabIndex = 0;
             lblPlayerName.Text = "Player Name";
-            lblPlayerName.Click += label1_Click;
+           
             // 
             // lblLosses
             // 
@@ -80,7 +80,7 @@
             lblDraws.Size = new Size(50, 20);
             lblDraws.TabIndex = 3;
             lblDraws.Text = "Draws";
-            lblDraws.Click += label4_Click;
+            
             // 
             // lVVictories
             // 

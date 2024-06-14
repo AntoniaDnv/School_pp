@@ -1,6 +1,9 @@
-﻿using static System.Windows.Forms.ListViewItem;
+﻿using static System.Net.Mime.MediaTypeNames;
+using System.Windows.Forms;
+using System.Xml.Linq;
+using static System.Windows.Forms.ListViewItem;
 
-namespace tennisScor4eApp
+namespace tennistest
 {
     partial class ScoreForm
     {
@@ -186,16 +189,17 @@ namespace tennisScor4eApp
             ResumeLayout(false);
             PerformLayout();
         }
-        private void ViewProfileOnClick()
+
+        private void AddNewGameButtonClick(object sender, EventArgs e)
         {
-            ListViewItem selectedRow = this.LVRanking.SelectedItems[0];
-            ListViewSubItem playerNameCell = selectedRow.SubItems[0];
-            string playerName = palyerNameColumn.Text;
-            using(PlayerNameForm palyerInfoForm = new PlayerNameForm(playerName, GetPlayerName(playerName))) 
-            {
-                palyerInfoForm.ShowDialog();
-            }
+            throw new NotImplementedException();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private Label lblRanking;

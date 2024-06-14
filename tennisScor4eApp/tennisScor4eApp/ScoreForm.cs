@@ -58,7 +58,7 @@ namespace tennisScor4eApp
         private void FillLatestGamesView()
         {
             this.LVLatestGames.Items.Clear();
-            // ne znam dali e ToList()
+            
             foreach (var game in games)
             {
                 foreach (var item in game.Value)
@@ -70,12 +70,12 @@ namespace tennisScor4eApp
 
         private void FillListView((string, int) firstPlayer, (string, int) secondPlayer)
         {
-            // string winner = GetWinner(firstPlayer, secondPlayer);
+             string winner = GetWinner(firstPlayer, secondPlayer);
 
             ListViewItem rollInLatestGamesListView = new ListViewItem();
             rollInLatestGamesListView.SubItems[0].Text = firstPlayer.Item1;
             rollInLatestGamesListView.SubItems.Add(secondPlayer.Item1);
-            // rollInLatestGamesListView.SubItems.Add(winner);
+             rollInLatestGamesListView.SubItems.Add(winner);
             rollInLatestGamesListView.SubItems.Add($"{firstPlayer.Item2} : {secondPlayer.Item2}");
 
             this.LVLatestGames.Items.Add(rollInLatestGamesListView);
@@ -111,7 +111,7 @@ namespace tennisScor4eApp
         {
             FillGamesData(firstPlayer, secondPlayer);
              FillPlayerWithPoints(firstPlayer);
-            // FillPlayerWithPoints(secondPlayer);
+             FillPlayerWithPoints(secondPlayer);
 
             FillRankingLsitView();
             FillLatestGamesView();
@@ -143,5 +143,23 @@ namespace tennisScor4eApp
                 playersWithPoints.Add(player.Item1, player.Item2);
             }
         }
+        private void listViewRankings_Click(object sender, EventArgs e)
+        {
+            var selectedRow = this.LVRanking.SelectedItems[0];
+            var playerNameCell = selectedRow.SubItems[0];
+            string playerName = playerNameCell.Text;
+
+            using (var playerInfoForm = new PlayerNameForm(playerName, GetPlayerName(playerName)))
+            {
+                playerInfoForm.ShowDialog();
+            }
+        }
+
+        private Dictionary<(string, int), List<(string, int)>> GetPlayerName(string playerName)
+           => games.Where(x => x.Key.Item1 == playerName
+               || x.Value.Any(y => y.Item1 == playerName))
+           .ToDictionary(x => x.Key, x => x.Value.Where(y => y.Item1 == playerName
+               || x.Value.Any(y => y.Item1 == playerName))
+           .ToList());
     }
 }
