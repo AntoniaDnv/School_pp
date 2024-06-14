@@ -13,41 +13,55 @@ namespace My_Secret_Folder
     public partial class NewFolder : Form
     {
         private readonly string filePath;
+       
+        public string FolderName { get; set; }
+
         public NewFolder()
         {
             InitializeComponent();
+        }
+        public NewFolder(string filePath)
+            : this()
+        {
             this.filePath = filePath;
         }
 
-        public string FolderName { get; private set; }
-        private void ButtonEnterClick(object sender, EventArgs e)
+        private void buttonEnter_Click(object sender, EventArgs e)
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
-                this.FolderName = this.textBoxFolderName.Text.Trim();
+                this.FolderName = textBoxFolderName.Text.Trim();
                 this.DialogResult = DialogResult.OK;
+
             }
         }
 
-        private void ValidateTextBoxFolderName(object sender, EventArgs e)
+        private void ValidateTextBoxFolderName(object sender, CancelEventArgs e)
         {
-            if(string.IsNullOrWhiteSpace(this.textBoxFolderName.Text)) 
+            if (string.IsNullOrWhiteSpace(this.textBoxFolderName.Text))
             {
                 e.Cancel = true;
                 this.textBoxFolderName.Focus();
-                //SetErrorMessage("Can not create a folder with empty name!");
+                SetErrorMessage("Cannot create folder with no name");
             }
-            else if ( /* the text from the insructions is unreadable - slide 10) */ )
+            else if (Directory.Exists(Path.Combine(this.filePath, textBoxFolderName.Text)))
             {
                 e.Cancel = true;
                 this.textBoxFolderName.Focus();
-                //SetErrorMessage("A folder with the same name already exists. ")
+                SetErrorMessage("A folder with the same name already exists");
             }
             else
             {
-                e.Cancel = true;
-                //SetErrorMessage(String.Empty);
+                e.Cancel = false;
+                SetErrorMessage(string.Empty);
             }
+
+        }
+
+        private void SetErrorMessage(string message)
+        {
+            this.errorProviderForFolderName.SetError(this.textBoxFolderName, message);
+            this.labelErrorProvider.Text = message;
         }
     }
 }
