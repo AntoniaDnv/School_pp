@@ -10,42 +10,39 @@ namespace Lasagna
     {
         static void Main(string[] args)
         {
-            var lasagna = new Lasagna();
-            int minutesInOven = lasagna.ExpectedMinutesInOven();
-            int remainingMinutesInOven = lasagna.RemainingMinutesInOven(30);
-            int leyarsTime = lasagna.PreparationTimeInMinutes(2);
-            int totalTime = lasagna.ElapsedTimeInMinutes(3, 20);
-            Console.WriteLine(totalTime);
 
+           
         }
-            class Lasagna
+
+        public static double SuccessRate(int speed)
+        {
+            if (speed >= 1 && speed <= 4)
             {
-            public int Test() => 40;
-                public int ExpectedMinutesInOven()
-                {
-                    return 40;
-                }
-                public int RemainingMinutesInOven(int minutesInOven)
-                {
-                    int totalMinutes = ExpectedMinutesInOven();
-                    return totalMinutes - minutesInOven;
-                }
-                public int PreparationTimeInMinutes(int leyars)
-                {
-                    return leyars * 2;
-                }
-                public int ElapsedTimeInMinutes(int leyarsTime, int minutesSpentInOven)
-                {
-                    return leyarsTime + minutesSpentInOven;
-                }
-            public static string Message(string logLine)
+                return 1;
+            }
+            else if (speed >= 5 && speed <= 8)
             {
-                string[] fuckU = logLine.Split(": ", StringSplitOptions.RemoveEmptyEntries);
-                char[] charsToTrim = { '[', ']' };
-               
-                return fuckU[0].ToLower().Trim();
+                return 0.9;
+            }
+            else if (speed == 9)
+            {
+                return 0.8;
+            }
+            else if (speed == 0)
+            {
+                return 0.0;
+            }
+            else
+            {
+                return 0.77;
             }
         }
+        public static double ProductionRatePerHour(int speed)
+        
+           =>  speed * 221 * SuccessRate(speed);
+    
+
+
     }
 } 
 
