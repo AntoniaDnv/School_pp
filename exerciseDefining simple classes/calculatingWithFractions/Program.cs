@@ -14,6 +14,14 @@ namespace calculatingWithFractions
 
             Fraction fractionOne = new Fraction(firstFractionInput[0], firstFractionInput[1]);
             Fraction fractionTwo = new Fraction(secondFractionInput[0], secondFractionInput[1]);
+            if(sign == "+")
+            {
+                Console.WriteLine($"{fractionOne} {sign} {fractionTwo} = {fractionOne + fractionTwo}");
+            }
+            else
+            {
+                Console.WriteLine($"{fractionOne} {sign} {fractionTwo} = {fractionOne - fractionTwo}");
+            }
         }
     }
 }
