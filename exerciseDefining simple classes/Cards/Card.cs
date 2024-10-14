@@ -9,19 +9,13 @@ namespace Cards
 {
     public class Card
     {
-        private readonly string face;
-        private readonly string suit;
+        public string Face { get; set; }
+        public string Suit { get; set; }
 
-        public String Face {  get; set; }
-        public String Suit { get; set; }
-
-        public Card(string face, string suit, string facee, string suite)
-        {
-
-        }
+      
         public void Print()
         {
-            Console.WriteLine();
+            Console.WriteLine($"{this.Face} {this.Suit}");
         }
     }
 

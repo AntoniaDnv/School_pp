@@ -12,11 +12,10 @@ namespace Cards
             List<Card> cards = new List<Card>();    
             for (int i = 0; i < faces.Length; i++) 
             {
-                foreach (string suite in suits) 
+                foreach (string suite in suits)
                 {
                     cards.Add(new Card() { Face = faces[i], Suit = suite });
                 }
-
             }
 
             Random random = new Random();
