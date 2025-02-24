@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IteratorAndComperator", "IteratorAndComperator\IteratorAndComperator.csproj", "{AE2334A3-1FE0-4569-AFF4-BE805093CDEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Library\Library.csproj", "{8D547458-D6DE-41C8-9313-D985B63D9025}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE2334A3-1FE0-4569-AFF4-BE805093CDEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE2334A3-1FE0-4569-AFF4-BE805093CDEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE2334A3-1FE0-4569-AFF4-BE805093CDEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE2334A3-1FE0-4569-AFF4-BE805093CDEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D547458-D6DE-41C8-9313-D985B63D9025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D547458-D6DE-41C8-9313-D985B63D9025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D547458-D6DE-41C8-9313-D985B63D9025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D547458-D6DE-41C8-9313-D985B63D9025}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E538930D-F5E9-463F-84EB-6187C0167731}
+	EndGlobalSection
+EndGlobal

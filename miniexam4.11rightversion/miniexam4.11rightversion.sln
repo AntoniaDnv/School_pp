@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "miniexam4.11rightversion", "miniexam4.11rightversion\miniexam4.11rightversion.csproj", "{31F2CD38-B031-4EFB-BDD3-C3DCB28B845B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Newspaper", "Newspaper\Newspaper.csproj", "{80A1D209-F787-4481-AD3F-D669A36C8F34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31F2CD38-B031-4EFB-BDD3-C3DCB28B845B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31F2CD38-B031-4EFB-BDD3-C3DCB28B845B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31F2CD38-B031-4EFB-BDD3-C3DCB28B845B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31F2CD38-B031-4EFB-BDD3-C3DCB28B845B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80A1D209-F787-4481-AD3F-D669A36C8F34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80A1D209-F787-4481-AD3F-D669A36C8F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80A1D209-F787-4481-AD3F-D669A36C8F34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80A1D209-F787-4481-AD3F-D669A36C8F34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {972003DB-9017-464E-82B1-CD8B89561626}
+	EndGlobalSection
+EndGlobal

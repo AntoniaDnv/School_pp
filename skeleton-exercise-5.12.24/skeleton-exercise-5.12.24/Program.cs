@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1
+﻿namespace skeleton_exercise_5._12._24
 {
     internal class Program
     {
