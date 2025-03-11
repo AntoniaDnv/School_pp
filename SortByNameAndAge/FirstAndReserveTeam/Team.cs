@@ -10,13 +10,13 @@ namespace PersonsInfo
     public class Team
     {
         private string name;
-        private List<Person> firtTeam;  
+        private List<Person> firstTeam;  
         private List<Person> reserveTeam;
 
         public Team(string name)
         {
             Name = name;
-            firtTeam = new List<Person>();
+            firstTeam = new List<Person>();
             reserveTeam = new List<Person>();
     
         }
@@ -24,7 +24,7 @@ namespace PersonsInfo
         public string Name {  get; set; }
         public IReadOnlyCollection<Person> FirtTeam 
         {
-            get { return this.firtTeam.AsReadOnly(); }
+            get { return this.firstTeam.AsReadOnly(); }
         }
 
         public IReadOnlyCollection<Person> ReserveTeam
@@ -36,7 +36,7 @@ namespace PersonsInfo
         {
             if (person.Age < 40)
             {
-                firtTeam.Add(person);
+                firstTeam.Add(person);
             }
             else 
             {
