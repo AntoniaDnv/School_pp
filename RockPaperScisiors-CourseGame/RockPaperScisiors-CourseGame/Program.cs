@@ -57,15 +57,9 @@
                 Console.WriteLine("Do you want to play again?");
                 Console.WriteLine("Yes/No");
                 string response = Console.ReadLine();
-                if (response.ToUpper() == "YES")
-                {
-                    playAgain = true;
-                }
-                else
-                {
-                    playAgain= false;
-                    return;
-                }
+                
+                playAgain = (response.ToUpper() == "YES") ? true : false;
+                
 
             }
         }
