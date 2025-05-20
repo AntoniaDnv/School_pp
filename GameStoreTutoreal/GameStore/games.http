@@ -1,4 +1,29 @@
 GET http://localhost:5279/games
 
 ###
-GET http://localhost:5279/games/1
+GET http://localhost:5279/games/3
+
+###
+POST http://localhost:5279/games
+Content-Type: application/json
+
+{
+    "name": "Minecraft",
+    "genre": "Kids and Family",
+    "price": 19.99,
+    "releaseDate": "2011-11-18"
+}
+###
+PUT  http://localhost:5279/games/1 
+Content-Type: application/json
+
+{
+    "name": "Sims four",
+    "genre": "Simulation",
+    "price": 20.99,
+    "releaseDate": "1952-07-15"
+}
+
+###
+
+DELETE http://localhost:5279/games/2
