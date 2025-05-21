@@ -14,7 +14,7 @@ Content-Type: application/json
     "releaseDate": "2011-11-18"
 }
 ###
-PUT  http://localhost:5279/games/1 
+PUT  http://localhost:5279/games/3
 Content-Type: application/json
 
 {
