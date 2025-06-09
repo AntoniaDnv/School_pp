@@ -9,7 +9,9 @@ class Program
 	{
 		var paymentMethods = new List<IPaymentMethod>
 		{
-			new CreditCardPayment(), new ApplewalletPayment(), new CashPayment()
+			new CreditCardPayment(), 
+			new ApplewalletPayment(), 
+			new CashPayment()
 		};
 
 		Console.WriteLine("=== Welcome to MyOnlineStore ===");
